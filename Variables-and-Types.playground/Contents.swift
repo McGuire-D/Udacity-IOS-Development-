@@ -23,3 +23,10 @@ print(question1)
 
 var response1 = "Maybe not perfect but as close as possible"
 print(response1)
+
+/*
+Print Hello World!
+ */
+
+var greeting = "Hello, world!"
+print(greeting)
