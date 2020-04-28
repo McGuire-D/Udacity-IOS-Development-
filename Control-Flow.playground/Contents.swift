@@ -60,13 +60,13 @@ var ofAge = age >= 21
 var yearsToGo = 21 - age
 
 if onGuestList1 && ofAge {
-    print("Welcome we have been expecting you!")
+    print("Welcome we have been expecting you \(name)!")
 }
 
 if !onGuestList1 {
-    print("Sorry, your name is not on the list. There is always next time")
+    print("Sorry, \(name) your not on the list. There is always next time")
 }
 
 if !ofAge {
-    print("Sorry try back in \(yearsToGo) years, you are a little to young. ")
+    print("Sorry try back in \(yearsToGo) years \(name), you are a little to young. ")
 }
