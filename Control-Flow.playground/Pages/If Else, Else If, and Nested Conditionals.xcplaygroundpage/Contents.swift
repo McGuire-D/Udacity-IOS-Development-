@@ -7,9 +7,10 @@
 //:     } else {
 //:         <code to execute>
 //:     }
-var breakfast = true
+var breakfast = false
 var lunch = false
 var dinner = false
+var secondBreakfast = true
 
 if breakfast {
     print("Good morning!")
@@ -17,6 +18,8 @@ if breakfast {
     print("Good afternoon!")
 } else if dinner {
     print("Good evening!")
+} else if secondBreakfast {
+    print("Second breakfast is the best breakfast")
 } else {
     print("Hello!")
 }
