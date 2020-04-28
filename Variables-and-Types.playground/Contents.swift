@@ -37,3 +37,5 @@ print(greeting)
  This is used for
  multiple line comments.
  */
+
+print("This will be printed, with the print function")
