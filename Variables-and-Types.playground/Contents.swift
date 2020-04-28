@@ -30,3 +30,10 @@ Print Hello World!
 
 var greeting = "Hello, world!"
 print(greeting)
+
+// This is used for single line comments.
+
+/*
+ This is used for
+ multiple line comments.
+ */
