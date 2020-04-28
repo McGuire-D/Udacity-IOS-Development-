@@ -39,3 +39,36 @@ print(greeting)
  */
 
 print("This will be printed, with the print function")
+
+/*
+ Intro into Variables
+*/
+
+// Udacity example of Variables
+
+// Consider a tomato soup recipe that makes 4 servings...
+var numberOfServingsForRecipe = 4
+var desiredNumberOfServings = 8
+
+var servingsFactor = desiredNumberOfServings/numberOfServingsForRecipe
+
+// Calculate the number of pounds of tomatoes needed for 8 servings.
+var poundsOfTomatoesForRecipe = 2
+var amountToUseToday = poundsOfTomatoesForRecipe * servingsFactor
+
+print(amountToUseToday)
+
+// Practice
+
+var numberOfPancakesPerPerson = 3
+var numberOfPeople = 4
+
+var totalPancakes = numberOfPancakesPerPerson*numberOfPeople
+
+print(totalPancakes)
+
+var cupsOfFlowerPerpancake = 1
+var totalCupsOfFlowerPerPancake = cupsOfFlowerPerpancake*numberOfPancakesPerPerson
+var totalFlower = totalCupsOfFlowerPerPancake*numberOfPeople
+
+print(totalFlower)
