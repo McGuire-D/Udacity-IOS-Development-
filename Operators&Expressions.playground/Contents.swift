@@ -84,3 +84,25 @@ var zero = 0
 
 // any number with a remainder of zero mod 2 will be even
 18 % 2
+
+
+var totalPayroll = 0
+
+var billySalary = 6500000
+var ericSalary = 5500000
+var drewSalary = 500000
+
+//Multiple ways of calculating total salary
+
+//totalPayroll =  billySalary + ericSalary + drewSalary
+
+/*
+totalPayroll += billySalary
+totalPayroll += ericSalary
+totalPayroll += drewSalary
+*/
+
+totalPayroll -= billySalary
+totalPayroll -= ericSalary
+totalPayroll -= drewSalary
+
