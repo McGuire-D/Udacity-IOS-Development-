@@ -70,3 +70,19 @@ if !onGuestList1 {
 if !ofAge {
     print("Sorry try back in \(yearsToGo) years \(name), you are a little to young. ")
 }
+
+
+// Suggested answer for the question
+
+
+/*
+if onGuestList && age >= 21 {
+    print("\(name), come party with us!")
+}
+
+if !onGuestList || age < 21 {
+    print("Sorry, \(name), maybe you can go play Bingo with the Android team.")
+    
+}
+*/
+
