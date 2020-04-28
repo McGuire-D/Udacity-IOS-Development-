@@ -106,3 +106,43 @@ totalPayroll -= billySalary
 totalPayroll -= ericSalary
 totalPayroll -= drewSalary
 
+
+/*
+ Prefix Expressions
+ Prefix expressions combine an optional prefix operator with an expression—typically a primary expression (variable):
+
+ var counter = 3
+ var negativeCounter = -counter
+ Here, -counter is a prefix expression combining the a negative sign (called unary minus operator in Swift) with the counter variable.
+ 
+
+
+
+ Binary Expressions
+ Binary expressions combine an infix binary operator with a left-hand expression and a right-hand expression. Binary expressions have the following form: leftHandSide operator rightHandSide.
+
+
+ This binary expression evaluates to 2 because 7 divided by 5 has a remainder of 2.
+ 
+ 
+ Postfix Expressions
+ Postfix expressions are formed by applying a postfix operator to an expression. Syntactically, every primary expression is also a postfix expression.
+
+ The following expression uses the ! operator which we haven't seen before. Don't worry, we will explain this operator later when we talk about Optionals. We are just mentioning it here for completeness.
+
+ var optionalNumber: Int? = 3
+ optionalNumber!
+ 
+
+
+ Operators With Strings
+ As you've just seen, operators can be used with a variety of numeric values. Additionally, Swift strings also support the use of operators. For example, adding two strings together creates a new string containing both of the original strings.
+
+ var hello = "Hello"
+ var world = "world!"
+ let greeting = hello + " " + world
+ And we can also use the compound assignment operator += to append to an existing string.
+
+ hello += "!"
+ */
+
