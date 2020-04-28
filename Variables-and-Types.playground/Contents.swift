@@ -87,3 +87,10 @@ var pi: Double = 3.14159265359
 var letterOfTheDay: Character = "z"
 var myFavoriteAnimal: String  = "octopus"
 var rainingOutside: Bool  = true
+
+/*
+ Strong Typing
+ Swift is a strongly typed language—meaning that once a variable’s type has been set, it cannot change.
+
+ In other words, while we can change the value of a variable, we cannot change its type.
+ */
