@@ -50,3 +50,37 @@ print(newTotalPoints)
  /=    Divide and assign    Performs / and then assigns the result to a variable    Assignment    Right    Binary, Infix
  %=    Remainder and assign    Performs % and then assigns the result to a variable    Assignment    Right    Binary, Infix
  */
+
+
+// Operator practice
+
+5+3
+
+5-3
+
+5-2.5
+
+5*3
+
+5 / 3
+
+5 * 3.0
+
+5 / 3.0
+
+
+var five = 5
+var three = 3
+var zero = 0
+
+// let result = five/zero
+
+//Mod function that leaves a remainder, also an easy wat to find even or odd numbers
+10 % 2
+5 % 5
+6 % 5
+7 % 5
+8 % 5
+
+// any number with a remainder of zero mod 2 will be even
+18 % 2
