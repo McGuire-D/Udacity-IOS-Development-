@@ -144,5 +144,42 @@ totalPayroll -= drewSalary
  And we can also use the compound assignment operator += to append to an existing string.
 
  hello += "!"
+ 
+ Operators are special symbols or phrases that can be used to check, change, or combine values.
+
+ Expressions are statements that evaluate to a single value. In programming lingo, you’d say expressions are statements that return or “can be reduced to” a single value.
  */
 
+var x = 20
+var y = 4
+var z = 13
+
+var result1 = y + 2 * 9 % 2
+
+var result2 = z / 2 + 4 * x
+
+var w = 2
+
+var someValue = 12 + w - 3
+
+
+/*
+ We would like to display a score when a user solves a word puzzle. The score is calculated by summing together 3 values. The first value is the number of vowels multiplied by the vowel bonus. The second value is the number of consonants multiplied by the consonant bonus. And the third value is the length of the word multiplied by length bonus.
+
+ 
+ Answer:
+ puzzleScore = (numberOfVowels * vowelBonus) + (numberOfConsonants * consonantBonus) + (lengthOfWord * lengthBonus)
+ */
+
+
+
+/*
+ Things to think about
+ Each of the above operators are closely related to Boolean values. They allow us to compose complex truth statements such as “if it is the weekend and it is raining, then I should stay at home”. Or, “if it is not hot and I am not staying inside, then I should wear warm clothes”. In each case, based on the values of the variables involved, we will get a result true or false value.
+
+ The specific names of these operators are...
+
+ && is the Logical AND operator
+ ! is the Logical NOT operator
+ <= is Less Than or Equal To operator
+ */
