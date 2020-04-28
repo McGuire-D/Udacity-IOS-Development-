@@ -181,3 +181,17 @@ print(emailSignature)
  */
 
 print("\"Hello\nWorld\"")
+
+
+/*
+ String Interpolation
+ 
+ String interpolation is another powerful feature of string literals you'll be using as you learn Swift. It enables us to insert variables and expressions directly into string literals. (Remember a string literal is a sequence of characters placed between double quotation marks.)
+ */
+
+var birthdayCheer = "Happy Birthday!"
+print(birthdayCheer)
+
+var name = "Kate"
+var customizedBirthdayCheer = "Happy Birthday, \(name)!"
+print(customizedBirthdayCheer)
