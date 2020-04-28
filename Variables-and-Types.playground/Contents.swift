@@ -94,3 +94,30 @@ var rainingOutside: Bool  = true
 
  In other words, while we can change the value of a variable, we cannot change its type.
  */
+// Example of strong typing
+petsAge = 13
+petsAge = 14
+/* petsAge = "Old"
+ 
+ this will receive an errorerror: Variables-and-Types.playground:100:11:
+ error: cannot assign value of type 'String' to type 'Int'
+ petsAge = "Old"
+*/
+
+
+//Constants vs Variables
+
+//As the name implies, you can not change the value of a Constant like you can a Variable
+
+//Example 1
+let whatsForDinner = "Pizza!"
+var customizedWhatsForDinner = "Salad, Gross!"
+
+/*
+ whatsForDinner = "Burgers!"
+ Trying to change a constant will throw an error and not run.
+ Variables-and-Types.playground:113:1: note: change 'let' to 'var' to make it mutable
+ let whatsForDinner = "Pizza!"
+*/
+
+
