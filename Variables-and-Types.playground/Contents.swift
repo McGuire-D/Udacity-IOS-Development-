@@ -121,3 +121,30 @@ var customizedWhatsForDinner = "Salad, Gross!"
 */
 
 
+//Example 2
+let birthYear = 1988
+var currentYear = 2020
+var age = currentYear-birthYear
+currentYear=1999
+age = currentYear-birthYear
+print(age)
+
+
+/*
+ Valid Names
+ In general, variable and constant names will contain uppercase and lowercase characters. You’ll also see names containing numbers and some special characters, such as underscores. Swift even lets you use emoji as variable and constant names, but this is rarely used in practice.
+ */
+
+let firstName = "Gabrielle"
+let _founder = "Sebastian"
+let 🐢 = "turtle"
+
+/*
+ However, some names are not allowed. For example, we can’t begin a constant name with a number, nor can we begin a name with a special character that may have another meaning in the language.
+
+ 
+ 3rdFromTheSun = "🌎"
+ var $amount = 31
+ 
+ When naming variables and constants, the standard convention is to use lowerCamelCase like the firstName constant above. You begin the name with a lowercase letter, and the first letter of each subsequent word is capitalized.
+ */
