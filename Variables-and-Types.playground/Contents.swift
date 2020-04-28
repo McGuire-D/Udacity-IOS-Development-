@@ -148,3 +148,34 @@ let 🐢 = "turtle"
  
  When naming variables and constants, the standard convention is to use lowerCamelCase like the firstName constant above. You begin the name with a lowercase letter, and the first letter of each subsequent word is capitalized.
  */
+
+
+/*
+ There are many instances where strings need to contain newline characters. Here we take a string literal that represents a person’s email signature, and assign it to a constant.
+ 
+ let emailSignature = "Aliyah Smith
+ VP, Sales
+ (555) - 555 - 5555"
+ 
+ However, if you try to run this in Xcode or the course sandbox, you'll get an error like this:
+
+ unterminated string literal
+ 
+ Let’s rewrite the above example by escaping the newline, using \n in place of the line breaks.
+ */
+
+let emailSignature = "Aliyah Smith\nVP, Sales\n(555) - 555 - 5555"
+print(emailSignature)
+
+
+/*
+ Escape Characters in Swift
+ The following are the most common escape characters:
+
+ Character    Usage
+ \n    Newline / line feed
+ \t    Horizontal tab
+ \"    Double quotation mark, using " alone signifies the end of a string
+ \'    Single quotation mark
+ \    Backslash, using "\" alone escapes the next character
+ */
