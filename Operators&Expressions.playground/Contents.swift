@@ -7,7 +7,9 @@ var numberOfDeaths = 0
 
 let pointsPerLife = 100
 let pointsPerDeath = 300
-let randomBonus = 20
+// Random Bonus was not explained in the lesson but it bothered me to have it as a set number.
+// This is how to set a random integer in swift.
+let randomBonus = Int.random(in: 0...100)
 
 // Note: I made randomBonus always return 20.
 
