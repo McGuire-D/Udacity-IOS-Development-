@@ -72,3 +72,18 @@ var totalCupsOfFlowerPerPancake = cupsOfFlowerPerpancake*numberOfPancakesPerPers
 var totalFlower = totalCupsOfFlowerPerPancake*numberOfPeople
 
 print(totalFlower)
+
+//Creating Variables
+//Swift assumes variables types unless you specify
+
+var petsAge = 12
+//petsAge is inferred to be an integer by swift,myMiddleInitial would be a string if it was not defined as a Character.
+var myMiddleInitial: Character = "A"
+
+//Additional variable decleration types
+var numberOfWheels: Int = 4
+var centimetersOfRainfall: Float = 5.5
+var pi: Double = 3.14159265359
+var letterOfTheDay: Character = "z"
+var myFavoriteAnimal: String  = "octopus"
+var rainingOutside: Bool  = true
