@@ -183,3 +183,23 @@ var someValue = 12 + w - 3
  ! is the Logical NOT operator
  <= is Less Than or Equal To operator
  */
+
+//Boolean expressions
+
+var age1 = 30
+
+age1 == 5// false
+
+age1 >= 18// true
+
+age1 <= 18// false
+
+/*
+ The == operator is known as a comparison operator. The remaining comparison operators handle all inequalities:
+
+ > greater than
+ < less than
+ >= greater than or equal to
+ <= less than or equal to
+ != not equal to
+ */
