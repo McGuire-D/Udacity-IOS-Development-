@@ -20,6 +20,13 @@ var onGuestList = false
 var knowsTheOwner = false
 //: Your code goes here
 
+if onGuestList && age >= 21 {
+    print("\(name), come party with us!")
+} else if knowsTheOwner {
+    print("Oh you know the owner \(name)? Why didnt you say so come in!")
+} else {
+    print("Sorry, \(name), maybe you can go play Bingo with the Android team.")
+}
 
 
 //: [Next](@next)
