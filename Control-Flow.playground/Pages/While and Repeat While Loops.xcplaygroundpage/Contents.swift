@@ -46,4 +46,31 @@ repeat {
 print("Lift off!")
 //: [Next](@next)
 */
- 
+// fliping coins
+// Heads = 0; Tails = 1
+var coinFlip1:Int = 0
+var coinFlip2:Int = 0
+
+while true {
+    coinFlip1 = Int(arc4random() % 2)
+    coinFlip2 = Int(arc4random() % 2)
+    print("\(coinFlip1), \(coinFlip2)")
+
+    if coinFlip1 == 1 && coinFlip2 == 1 {
+        break
+    }
+}
+
+
+//Break keyword practice
+
+var number = 0
+
+while true {
+    number += 2
+    print(number)
+    // ↓ Your code goes here ↓
+    if number > 498{
+    break
+    }
+}
