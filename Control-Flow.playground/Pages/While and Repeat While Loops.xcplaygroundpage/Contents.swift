@@ -15,7 +15,7 @@ while (!(dieRoll1 == 1 && dieRoll2 == 1)) {
     dieRoll2 = Int(arc4random() % 6) + 1
     print("\(dieRoll1), \(dieRoll2)")
 }
-
+/*
 while (true) {
     var dieRoll1 = Int(arc4random() % 6) + 1
     var dieRoll2 = Int(arc4random() % 6) + 1
@@ -24,9 +24,20 @@ while (true) {
         break
     }
 }
+*/
 //: ## Repeat-While Loops
+
+var num = 1
+
+while num<1000{
+    num+=1
+    if num%2 == 0{
+        print(num)
+    }
+}
+    
 //: In repeat-while loops, the condition is evaluated after the loop body. The loop is guaranteed to execute at least once.
-var countdown = 10
+/*var countdown = 10
 
 repeat {
     print(countdown)
@@ -34,3 +45,5 @@ repeat {
 } while countdown > 0
 print("Lift off!")
 //: [Next](@next)
+*/
+ 
