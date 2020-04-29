@@ -28,3 +28,32 @@ var school1 = "Udacity"
 var name2 = "Jarrod Parkes"
 var age2 = 24
 var school2 = "Udacity"
+
+
+//First attempt at struct syntax
+
+struct Author {
+    let firstName: String
+    let lastName: String
+    var living: Bool
+}
+
+var ayush = Student(name: "Ayush Saraswat", age: 19, school: "Udacity")
+
+print(ayush)
+
+
+
+/*
+Practice: Movie Struct Initialization
+Using the default constructor, create a new instance of the Movie struct. Assign the instance to a constant called myMovie.
+*/
+
+
+struct Movie {
+    let title: String
+    let year: Int
+}
+// ↓ your code here ↓
+
+let myMovie = Movie(title: "Stephens Universe",year: 1882)
