@@ -10,3 +10,9 @@ func sayHello() {
 //: called "sayHello"
 sayHello()
 //: [Next](@next)
+
+func turtles() {
+    print("I like turtles")
+}
+
+turtles()
