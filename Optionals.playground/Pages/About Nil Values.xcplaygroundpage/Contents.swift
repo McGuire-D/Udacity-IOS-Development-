@@ -23,8 +23,8 @@ var s2: String
 s1 = "123"
 s2 = "ABC"
 
-//y = Int(s1)
-//y = Int(s2)
+y = Int(s1)
+y = Int(s2)
 //: 2. Properties that cannot or should not be initialized when an instance is created
 struct Villain {
     let name: String
