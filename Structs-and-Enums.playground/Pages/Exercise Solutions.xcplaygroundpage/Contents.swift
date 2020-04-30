@@ -30,6 +30,7 @@ struct Point2D {
     var y: Int = 0
 }
 
+    
 var characterPosition = Point2D(x: 10, y: 10)
 characterPosition.x = 20
 characterPosition.y = 5
