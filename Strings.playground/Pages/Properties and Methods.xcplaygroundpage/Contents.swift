@@ -33,8 +33,17 @@ func checkLength(message: String) -> Bool {
  Practice: Case Insensitive Search
  Finish implementing search(). If the second string (s2) occurs anywhere in the first string (s1), return true. Otherwise, return false. The search should be case insensitive. For example, search(s1: "Udacity", s2: "CITY") returns true.
 
- */
+ 
 
 func search(s1: String, s2: String) -> Bool {
     return s1.lowercased().range(of: s2.lowercased()) != nil
+}
+
+
+ Practice: Is Palindrome?
+ Finish implementing isPalindrome() to return true if the input string is the same forwards and backwards, and false if not. The search should be case sensitive, for example, isPalindrome(input: "taCoCat") would return true whereas isPalindrome(input: "TaCoCAt") would return false.
+ */
+
+func isPalindrome(input: String) -> Bool {
+    return String(input.reversed()) == input
 }
