@@ -17,7 +17,10 @@ while message.last == " " {
 while message.first == " " {
     message.removeFirst()
 }
+print(message)
 //: Replacing Substrings
 let verbose = "We hope you are very excited to learn Swift. It's a very fun and very useful skill. Soon enough, you'll be writing your very own app!"
 let better = verbose.replacingOccurrences(of: "very ", with: "")
 //: [Next](@next)
+
+print(better)
