@@ -38,3 +38,30 @@ if let tailLength = animal.tail?.length {
 let tailLength = animal.tail?.length ?? "0"
 print("Tail length: \(tailLength)")
 //: [Next](@next)
+
+/*
+Using the enums and structures, implement the getArtistGenre() function. Given a Song as input, return the raw value of the artist's primary genre. If either the artist is nil or the primaryGenre is nil, then return an empty string. You must use optional chaining and the nil coalescing operator (??).
+ */
+
+var artist = Artist(name: "Billy Dean")
+
+
+enum Genre: String {
+    case country, blues, folk
+}
+
+struct Artist {
+    let name: String
+    var primaryGenre: Genre?
+}
+
+struct Song {
+    let title: String
+    let released: Int
+    var artist: Artist?
+}
+
+func getArtistGenre(song: Song) -> String {
+    return song.artist?.primaryGenre?.rawValue ?? "" // This is the answer
+}
+
