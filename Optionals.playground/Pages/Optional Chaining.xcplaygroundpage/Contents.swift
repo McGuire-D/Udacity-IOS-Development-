@@ -25,7 +25,7 @@ struct Animal {
     }
 }
 
-var animal = Animal(name: "Lenny", species: "lemur", tailLength: 12)
+var animal = Animal(name: "Lenny", species: "lemur", tailLength: nil)
 
 //animal = Animal(name: "Gilbert", species: "Gorilla", tailLength: nil )
 

@@ -2,21 +2,21 @@
 import Foundation
 //: ## Unwrapping Optionals
 //: An Int? cannot be used like an Int
+/*
 var z: Int
 var string: String
 string = "123"
 z = Int(s)
 z * 2
 
-/*
  Your Turn
  Make z an optional that can either store an Int value or nil.
-*/
+
  var z: Int? //the fix is adding a question mark after Int
  var s: String
  s = "123"
  z = Int(s)
-
+*/
 
 //: A scenario that may or may not return a `nil` value
 var zee: Int?
