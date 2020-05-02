@@ -63,4 +63,13 @@ func countDistinct(numbers: [Int]) -> Int {
 }
 
 
+// more practice
+func practicePerfection(array: [Int], m: Int) ->[Int] {
+    var perfection = array
+    for _ in 0..<m {
+        perfection.remove(at: 0)
+    }
+    return perfection
+}
 
+print(practicePerfection(array: [1,2,3,4,5,6,7,8,9,10,11,12], m: 6))
