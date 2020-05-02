@@ -43,6 +43,8 @@ func removeElements(array: [Int], n: Int) -> [Int] {
     }
     return newArray
 }
+
+print(removeElements(array: [1,2,3,4,6,8], n: 2))// using the example above we are removing from 0 through 2
 //: Practice: Number Frequency
 func frequency(numbers: [Int]) -> [Int: Int] {
     var frequencies = [Int: Int]()
@@ -59,3 +61,6 @@ func frequency(numbers: [Int]) -> [Int: Int] {
 func countDistinct(numbers: [Int]) -> Int {
     return Set<Int>(numbers).count
 }
+
+
+
