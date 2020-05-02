@@ -83,3 +83,12 @@ if let dog = presidentialPetsDict["Barack Obama"] {
         print("No value found.")
     }
 
+
+var studioAlbums = ["Led Zeppelin":1969, "Led Zeppelin II":1969, "Led Zeppelin III":1970,
+"Led Zeppelin IV":1971, "House of the Holy":1973, "Physical Graffiti":1975,
+"Presence":1976, "In Through the Out Door":1979, "Coda":1982]
+
+print(studioAlbums.count)
+
+print("Led Zepplin had \(studioAlbums.count) albums")
+
