@@ -37,3 +37,18 @@ let archive = MovieArchive(movies: [movie1, movie2])
 archive.filterByYear(year: 1935)
 archive.movies
 //: [Next](@next)
+class Album {
+    let title: String
+    let artist: String
+    let yearReleased: Int
+    
+    init(title: String, artist: String, yearReleased: Int){
+        self.title = title
+        self.artist = artist
+        self.yearReleased = yearReleased
+    }
+}
+
+let firstThrice = Album(title: "Identity Crisis", artist: "Thrice", yearReleased: 2000)
+
+print(firstThrice)
