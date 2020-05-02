@@ -37,3 +37,49 @@ if let groupOfSasquatches = animalGroupsDict["Sasquatches"] {
     print("No value found for that key.")
 }
 //: [Next](@next)
+
+/*
+ Practice: Number Frequency
+ Finish implementing the function frequency(numbers: [Int]) -> [Int: Int] that returns a dictionary containing the frequency of each number in the array. The dictionary's keys will be the Int values in the numbers array. The dictionary's values will be the number of times that number occurs in the numbers array. For example
+
+ If the numbers array were the following:
+
+ let input = [1, 3, 1, 1, 2, 7, 3, 5, 8, 5, 4, 9]
+ Then the calling frequency(numbers: input) would return a dictionary like the following.
+
+ [
+     1: 3,
+     2: 1,
+     3: 2,
+     4: 1,
+     5: 2,
+     7: 1,
+     8: 1,
+     9: 1
+ ]
+ The numbers in the output are ordered for demonstrational purposes, but keep in mind that dictionaries are an unordered data type. Your dictionary's values will just need to match the number of occurrences of each number in the array. */
+
+func frequency(numbers: [Int]) -> [Int: Int] {
+    var frequencies = [Int: Int]()
+    for i in numbers {
+        if let oldValue = frequencies[i] {
+            frequencies[i] = oldValue + 1
+        } else {
+            frequencies[i] = 1
+        }
+    }
+    return frequencies
+}
+
+var testDictionary = ["Donkeys": true,"Elephants": true]
+
+
+
+var presidentialPetsDict = ["George H. W. Bush": "Millie", "Barack Obama": "Bo", "Bill Clinton": "Boots","George Bush": "Miss Beazley", "Ronald Reagan": "Lucky"]
+
+if let dog = presidentialPetsDict["Barack Obama"] {
+        print("Michele Obama walks \(dog) evey morning.")
+    } else {
+        print("No value found.")
+    }
+
