@@ -54,4 +54,35 @@ Values that are passed by reference, such as instances of classes, are not copie
  3.Class: An employee may have many properties and also has the ability to perform actions, so this sounds like a class.
  4.Property: The vehicle belongs to a person, so it is likely the property of a class representing a person. If you answered "Class" than that's right too, as it has many properties and performs many functions.
  5.Method: This is also an action, and methods perform actions.
+ 
+ Reflect
+ Let's take a minute for some practice with inheritance. Consider the following class hierarchy:
+
+ A LeadGuitarist inherits from a Guitarist.
+ A RhythmGuitarist inherits from Guitarist.
+ A Guitarist inherits from a Musician.
+ A Musician does not inherit from any class.
+ Now answer these questions (hint: it may help to draw a hierarchy diagram—similar to a family tree—for these classes):
+
+ 1.Which class is a superclass of LeadGuitarist?
+ 2.Which class is a subclass of Musician?
+ 3.What are the subclasses of Guitarist?
+ 4.Name the leaf class or classes.
+ 5.Name the root class or classes.
+ 6.Name the ancestors of LeadGuitarist.
+ 7.Name the descendants of Guitarist.
+ 8.Name the child classes of Guitarist.
+ 
+ 
+ Udacity answer, I was 80% correct using their answer because of this
+ 
+ 1.Guitarist
+ 2.Guitarist
+ 3.LeadGuitarist and RhythmGuitarist
+ 4.LeadGuitarist and RhythmGuitarist
+ 5.Musician
+ 6.Musician and Guitarist
+ 7.LeadGuitarist and RhythmGuitarist
+ 8.LeadGuitarist and RhythmGuitarist
+ 
  */
