@@ -15,3 +15,10 @@ trees.insert("🌵")
 trees.remove("🌵")
 trees.count
 //: [Next](@next)
+
+let countDistinct = [20, 10, 10, 30, 20]
+
+func countDistinct(numbers: [Int]) -> Int {
+    return Set<Int>(numbers).count
+}
+
