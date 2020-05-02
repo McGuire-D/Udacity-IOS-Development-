@@ -74,7 +74,7 @@ func frequency(numbers: [Int]) -> [Int: Int] {
 var testDictionary = ["Donkeys": true,"Elephants": true]
 
 
-
+// Solo practice trying to understand changing and using dictionaries
 var presidentialPetsDict = ["George H. W. Bush": "Millie", "Barack Obama": "Bo", "Bill Clinton": "Boots","George Bush": "Miss Beazley", "Ronald Reagan": "Lucky"]
 
 if let dog = presidentialPetsDict["Barack Obama"] {
