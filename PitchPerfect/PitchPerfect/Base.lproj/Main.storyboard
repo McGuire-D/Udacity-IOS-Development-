@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y06-fv-UBC">
+                                <rect key="frame" x="162" y="418" width="90" height="60"/>
+                                <color key="backgroundColor" red="0.46696481812490021" green="1" blue="0.42751775855409169" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Kaz-bA-NT6"/>
+                                    <constraint firstAttribute="width" constant="90" id="Xwa-wn-ncB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Record"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0om-zH-kOI"/>
+                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ih-EU-iYi"/>
+                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BfQ-jo-jDS"/>
+                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSk-LL-wSV"/>
+                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bFr-aH-dle"/>
+                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s1i-uj-LzN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
