@@ -30,9 +30,8 @@
                         <constraints>
                             <constraint firstItem="y06-fv-UBC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0om-zH-kOI"/>
                             <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ih-EU-iYi"/>
-                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BfQ-jo-jDS"/>
+                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ewt-nb-sQV"/>
                             <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSk-LL-wSV"/>
-                            <constraint firstItem="y06-fv-UBC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bFr-aH-dle"/>
                             <constraint firstItem="y06-fv-UBC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s1i-uj-LzN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
