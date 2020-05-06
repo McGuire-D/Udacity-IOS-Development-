@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 </constraints>
                                 <state key="normal" image="Record Button"/>
                                 <connections>
-                                    <action selector="RecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EOW-ls-SRV"/>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEy-S8-puL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iev-ww-LHu">
@@ -42,7 +42,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G7s-8c-9ZA"/>
-                                    <segue destination="USf-cz-dOe" kind="show" id="pPb-Vt-XHn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +63,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="z69-lb-Tbr"/>
                     <connections>
-                        <outlet property="recordButton" destination="y06-fv-UBC" id="PR1-kD-HaV"/>
+                        <outlet property="recordButton" destination="y06-fv-UBC" id="kZR-Pi-nFs"/>
                         <outlet property="recordingLabel" destination="iev-ww-LHu" id="87f-Qe-DFT"/>
                         <outlet property="stopRecordButton" destination="WdH-3M-Nj2" id="JhL-WE-sIe"/>
                     </connections>
