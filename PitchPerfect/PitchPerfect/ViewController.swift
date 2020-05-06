@@ -19,7 +19,10 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("ViewWillAppear called")
     }
+    
+
     @IBAction func RecordAudio(_ sender: Any) {
         print("Record button was pressed")
         recordingLabel.text="Recording in Progress"
