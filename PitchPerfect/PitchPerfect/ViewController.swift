@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        <#code#>
+        super.viewWillAppear(animated)
     }
     @IBAction func RecordAudio(_ sender: Any) {
         print("Record button was pressed")
