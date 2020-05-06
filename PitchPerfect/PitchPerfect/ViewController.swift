@@ -9,8 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var recordButton: UIButton!
+    
     @IBOutlet weak var recordingLabel: UILabel!
+    @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordButton: UIButton!
     
     override func viewDidLoad() {
@@ -23,14 +24,14 @@ class ViewController: UIViewController {
         print("ViewWillAppear called")
     }
     
-    @IBAction func RecordAudio(_ sender: Any) {
+    @IBAction func RecordAudio(_ sender: AnyObject) {
         recordingLabel.text = "Recording in progress"
         stopRecordButton.isEnabled = true
         recordButton.isEnabled = false
         
     }
     
-    @IBAction func stopRecording(_ sender: Any) {
+    @IBAction func stopRecording(_ sender: AnyObject) {
         recordButton.isEnabled = true
         stopRecordButton.isEnabled = false
         recordingLabel.text = "Tap to Record"
