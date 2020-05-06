@@ -28,11 +28,18 @@
                                     <action selector="RecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EOW-ls-SRV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iev-ww-LHu">
-                                <rect key="frame" x="156" y="486" width="102" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdH-3M-Nj2">
+                                <rect key="frame" x="140" y="515" width="134" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Oi-Aw-Enh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iev-ww-LHu">
+                                <rect key="frame" x="148" y="486" width="118.5" height="23"/>
                                 <accessibility key="accessibilityConfiguration" label="Tap to Record"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,14 +50,21 @@
                             <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ih-EU-iYi"/>
                             <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ewt-nb-sQV"/>
                             <constraint firstItem="y06-fv-UBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSk-LL-wSV"/>
+                            <constraint firstItem="WdH-3M-Nj2" firstAttribute="top" secondItem="y06-fv-UBC" secondAttribute="bottom" constant="37" id="OIX-5p-4hc"/>
+                            <constraint firstItem="iev-ww-LHu" firstAttribute="centerX" secondItem="y06-fv-UBC" secondAttribute="centerX" id="hmw-CQ-BjQ"/>
+                            <constraint firstItem="WdH-3M-Nj2" firstAttribute="centerX" secondItem="y06-fv-UBC" secondAttribute="centerX" id="k2U-Dp-C7A"/>
+                            <constraint firstItem="iev-ww-LHu" firstAttribute="top" secondItem="y06-fv-UBC" secondAttribute="bottom" constant="8" id="os0-su-qoz"/>
                             <constraint firstItem="y06-fv-UBC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s1i-uj-LzN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="iev-ww-LHu" id="87f-Qe-DFT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="663.768115942029" y="100.44642857142857"/>
         </scene>
     </scenes>
 </document>
