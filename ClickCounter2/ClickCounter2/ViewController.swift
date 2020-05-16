@@ -6,6 +6,7 @@
 //  Copyright © 2020 Dustin McGuire. All rights reserved.
 //
 
+// This is the same as the first Click Counter except done through storyboard
 import UIKit
 
 class ViewController: UIViewController {
