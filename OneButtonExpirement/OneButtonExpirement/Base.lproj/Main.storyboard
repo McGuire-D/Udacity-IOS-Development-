@@ -38,6 +38,15 @@
                                     <action selector="libraryButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNW-Tg-mja"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3A-8U-ew0">
+                                <rect key="frame" x="163" y="547" width="97" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Alert Test!"/>
+                                <connections>
+                                    <action selector="experiment" destination="BYZ-38-t0r" eventType="touchUpInside" id="xdx-td-0F6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
