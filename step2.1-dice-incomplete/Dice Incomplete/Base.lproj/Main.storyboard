@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -29,7 +29,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="rollTheDice" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QwY-lY-LGg"/>
+                                    <segue destination="qUR-90-axl" kind="modal" identifier="rollDice" id="K7z-xw-8V2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,18 +56,18 @@
                         <viewControllerLayoutGuide type="bottom" id="SdN-wF-iDE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rXr-oK-49d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d1" translatesAutoresizingMaskIntoConstraints="NO" id="r8F-NY-C0r">
-                                <rect key="frame" x="157" y="152" width="100" height="100"/>
+                                <rect key="frame" x="157" y="108" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="oHf-sk-rOW"/>
                                     <constraint firstAttribute="width" constant="100" id="tFr-I0-E3T"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuk-Od-dyq">
-                                <rect key="frame" x="174.5" y="528" width="65" height="43"/>
+                                <rect key="frame" x="174.5" y="484" width="65" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="42p-k4-l3U"/>
                                     <constraint firstAttribute="width" constant="65" id="cWC-Lx-iXP"/>
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d5" translatesAutoresizingMaskIntoConstraints="NO" id="auL-3f-b4I">
-                                <rect key="frame" x="157" y="274" width="100" height="100"/>
+                                <rect key="frame" x="157" y="230" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="9I0-9d-XYF"/>
                                     <constraint firstAttribute="height" constant="100" id="rvP-os-ciZ"/>
@@ -111,7 +111,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckr-Co-O4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="o8S-Co-8tn"/>
             </objects>
-            <point key="canvasLocation" x="934.78260869565224" y="588.61607142857144"/>
+            <point key="canvasLocation" x="1322" y="603"/>
         </scene>
     </scenes>
     <resources>
