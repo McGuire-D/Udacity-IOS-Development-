@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ColorChanger
+//  roshambo
 //
-//  Created by Dustin McGuire on 5/16/20.
+//  Created by Dustin McGuire on 5/22/20.
 //  Copyright © 2020 Dustin McGuire. All rights reserved.
 //
 

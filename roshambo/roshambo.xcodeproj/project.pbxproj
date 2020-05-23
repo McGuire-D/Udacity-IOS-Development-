@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5AB535424703B12000E525F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AB535324703B12000E525F /* AppDelegate.swift */; };
-		A5AB535624703B12000E525F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AB535524703B12000E525F /* SceneDelegate.swift */; };
-		A5AB535824703B12000E525F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AB535724703B12000E525F /* ViewController.swift */; };
-		A5AB535B24703B12000E525F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AB535924703B12000E525F /* Main.storyboard */; };
-		A5AB535D24703B13000E525F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AB535C24703B13000E525F /* Assets.xcassets */; };
-		A5AB536024703B13000E525F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AB535E24703B13000E525F /* LaunchScreen.storyboard */; };
+		A50520BA24789ABE00619A60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50520B924789ABE00619A60 /* AppDelegate.swift */; };
+		A50520BE24789ABE00619A60 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50520BD24789ABE00619A60 /* SelectionViewController.swift */; };
+		A50520C124789ABE00619A60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50520BF24789ABE00619A60 /* Main.storyboard */; };
+		A50520C324789ABF00619A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50520C224789ABF00619A60 /* Assets.xcassets */; };
+		A50520C624789ABF00619A60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50520C424789ABF00619A60 /* LaunchScreen.storyboard */; };
+		A50520D024789BCF00619A60 /* RoshamboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50520CF24789BCF00619A60 /* RoshamboViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A5AB535024703B12000E525F /* ColorChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5AB535324703B12000E525F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5AB535524703B12000E525F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5AB535724703B12000E525F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5AB535A24703B12000E525F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A5AB535C24703B13000E525F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A5AB535F24703B13000E525F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A5AB536124703B13000E525F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A50520B624789ABE00619A60 /* roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50520B924789ABE00619A60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A50520BD24789ABE00619A60 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		A50520C024789ABE00619A60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A50520C224789ABF00619A60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A50520C524789ABF00619A60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A50520C724789ABF00619A60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A50520CF24789BCF00619A60 /* RoshamboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A5AB534D24703B12000E525F /* Frameworks */ = {
+		A50520B324789ABE00619A60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5AB534724703B12000E525F = {
+		A50520AD24789ABE00619A60 = {
 			isa = PBXGroup;
 			children = (
-				A5AB535224703B12000E525F /* ColorChanger */,
-				A5AB535124703B12000E525F /* Products */,
+				A50520B824789ABE00619A60 /* roshambo */,
+				A50520B724789ABE00619A60 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A5AB535124703B12000E525F /* Products */ = {
+		A50520B724789ABE00619A60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5AB535024703B12000E525F /* ColorChanger.app */,
+				A50520B624789ABE00619A60 /* roshambo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A5AB535224703B12000E525F /* ColorChanger */ = {
+		A50520B824789ABE00619A60 /* roshambo */ = {
 			isa = PBXGroup;
 			children = (
-				A5AB535324703B12000E525F /* AppDelegate.swift */,
-				A5AB535524703B12000E525F /* SceneDelegate.swift */,
-				A5AB535724703B12000E525F /* ViewController.swift */,
-				A5AB535924703B12000E525F /* Main.storyboard */,
-				A5AB535C24703B13000E525F /* Assets.xcassets */,
-				A5AB535E24703B13000E525F /* LaunchScreen.storyboard */,
-				A5AB536124703B13000E525F /* Info.plist */,
+				A50520B924789ABE00619A60 /* AppDelegate.swift */,
+				A50520BD24789ABE00619A60 /* SelectionViewController.swift */,
+				A50520CF24789BCF00619A60 /* RoshamboViewController.swift */,
+				A50520BF24789ABE00619A60 /* Main.storyboard */,
+				A50520C424789ABF00619A60 /* LaunchScreen.storyboard */,
+				A50520C224789ABF00619A60 /* Assets.xcassets */,
+				A50520C724789ABF00619A60 /* Info.plist */,
 			);
-			path = ColorChanger;
+			path = roshambo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5AB534F24703B12000E525F /* ColorChanger */ = {
+		A50520B524789ABE00619A60 /* roshambo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5AB536424703B13000E525F /* Build configuration list for PBXNativeTarget "ColorChanger" */;
+			buildConfigurationList = A50520CA24789ABF00619A60 /* Build configuration list for PBXNativeTarget "roshambo" */;
 			buildPhases = (
-				A5AB534C24703B12000E525F /* Sources */,
-				A5AB534D24703B12000E525F /* Frameworks */,
-				A5AB534E24703B12000E525F /* Resources */,
+				A50520B224789ABE00619A60 /* Sources */,
+				A50520B324789ABE00619A60 /* Frameworks */,
+				A50520B424789ABE00619A60 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ColorChanger;
-			productName = ColorChanger;
-			productReference = A5AB535024703B12000E525F /* ColorChanger.app */;
+			name = roshambo;
+			productName = roshambo;
+			productReference = A50520B624789ABE00619A60 /* roshambo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A5AB534824703B12000E525F /* Project object */ = {
+		A50520AE24789ABE00619A60 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Dustin McGuire";
 				TargetAttributes = {
-					A5AB534F24703B12000E525F = {
-						CreatedOnToolsVersion = 11.4.1;
+					A50520B524789ABE00619A60 = {
+						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
-			buildConfigurationList = A5AB534B24703B12000E525F /* Build configuration list for PBXProject "ColorChanger" */;
+			buildConfigurationList = A50520B124789ABE00619A60 /* Build configuration list for PBXProject "roshambo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = A5AB534724703B12000E525F;
-			productRefGroup = A5AB535124703B12000E525F /* Products */;
+			mainGroup = A50520AD24789ABE00619A60;
+			productRefGroup = A50520B724789ABE00619A60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5AB534F24703B12000E525F /* ColorChanger */,
+				A50520B524789ABE00619A60 /* roshambo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A5AB534E24703B12000E525F /* Resources */ = {
+		A50520B424789ABE00619A60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5AB536024703B13000E525F /* LaunchScreen.storyboard in Resources */,
-				A5AB535D24703B13000E525F /* Assets.xcassets in Resources */,
-				A5AB535B24703B12000E525F /* Main.storyboard in Resources */,
+				A50520C624789ABF00619A60 /* LaunchScreen.storyboard in Resources */,
+				A50520C324789ABF00619A60 /* Assets.xcassets in Resources */,
+				A50520C124789ABE00619A60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A5AB534C24703B12000E525F /* Sources */ = {
+		A50520B224789ABE00619A60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5AB535824703B12000E525F /* ViewController.swift in Sources */,
-				A5AB535424703B12000E525F /* AppDelegate.swift in Sources */,
-				A5AB535624703B12000E525F /* SceneDelegate.swift in Sources */,
+				A50520D024789BCF00619A60 /* RoshamboViewController.swift in Sources */,
+				A50520BE24789ABE00619A60 /* SelectionViewController.swift in Sources */,
+				A50520BA24789ABE00619A60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A5AB535924703B12000E525F /* Main.storyboard */ = {
+		A50520BF24789ABE00619A60 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A5AB535A24703B12000E525F /* Base */,
+				A50520C024789ABE00619A60 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A5AB535E24703B13000E525F /* LaunchScreen.storyboard */ = {
+		A50520C424789ABF00619A60 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A5AB535F24703B13000E525F /* Base */,
+				A50520C524789ABF00619A60 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A5AB536224703B13000E525F /* Debug */ = {
+		A50520C824789ABF00619A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +216,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		A5AB536324703B13000E525F /* Release */ = {
+		A50520C924789ABF00619A60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,34 +280,34 @@
 			};
 			name = Release;
 		};
-		A5AB536524703B13000E525F /* Debug */ = {
+		A50520CB24789ABF00619A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ColorChanger/Info.plist;
+				INFOPLIST_FILE = roshambo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Udacity.ColorChanger;
+				PRODUCT_BUNDLE_IDENTIFIER = Udacity.roshambo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A5AB536624703B13000E525F /* Release */ = {
+		A50520CC24789ABF00619A60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ColorChanger/Info.plist;
+				INFOPLIST_FILE = roshambo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Udacity.ColorChanger;
+				PRODUCT_BUNDLE_IDENTIFIER = Udacity.roshambo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5AB534B24703B12000E525F /* Build configuration list for PBXProject "ColorChanger" */ = {
+		A50520B124789ABE00619A60 /* Build configuration list for PBXProject "roshambo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5AB536224703B13000E525F /* Debug */,
-				A5AB536324703B13000E525F /* Release */,
+				A50520C824789ABF00619A60 /* Debug */,
+				A50520C924789ABF00619A60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5AB536424703B13000E525F /* Build configuration list for PBXNativeTarget "ColorChanger" */ = {
+		A50520CA24789ABF00619A60 /* Build configuration list for PBXNativeTarget "roshambo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5AB536524703B13000E525F /* Debug */,
-				A5AB536624703B13000E525F /* Release */,
+				A50520CB24789ABF00619A60 /* Debug */,
+				A50520CC24789ABF00619A60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A5AB534824703B12000E525F /* Project object */;
+	rootObject = A50520AE24789ABE00619A60 /* Project object */;
 }
