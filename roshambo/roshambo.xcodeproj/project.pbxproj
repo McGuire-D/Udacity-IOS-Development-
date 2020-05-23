@@ -12,7 +12,7 @@
 		A50520C124789ABE00619A60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50520BF24789ABE00619A60 /* Main.storyboard */; };
 		A50520C324789ABF00619A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50520C224789ABF00619A60 /* Assets.xcassets */; };
 		A50520C624789ABF00619A60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50520C424789ABF00619A60 /* LaunchScreen.storyboard */; };
-		A50520D024789BCF00619A60 /* RoshamboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50520CF24789BCF00619A60 /* RoshamboViewController.swift */; };
+		A5D0210224795BDF000F5DC3 /* RoshamboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D0210124795BDF000F5DC3 /* RoshamboViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		A50520C224789ABF00619A60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A50520C524789ABF00619A60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A50520C724789ABF00619A60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A50520CF24789BCF00619A60 /* RoshamboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboViewController.swift; sourceTree = "<group>"; };
+		A5D0210124795BDF000F5DC3 /* RoshamboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			children = (
 				A50520B924789ABE00619A60 /* AppDelegate.swift */,
 				A50520BD24789ABE00619A60 /* SelectionViewController.swift */,
-				A50520CF24789BCF00619A60 /* RoshamboViewController.swift */,
+				A5D0210124795BDF000F5DC3 /* RoshamboViewController.swift */,
 				A50520BF24789ABE00619A60 /* Main.storyboard */,
 				A50520C424789ABF00619A60 /* LaunchScreen.storyboard */,
 				A50520C224789ABF00619A60 /* Assets.xcassets */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A50520D024789BCF00619A60 /* RoshamboViewController.swift in Sources */,
+				A5D0210224795BDF000F5DC3 /* RoshamboViewController.swift in Sources */,
 				A50520BE24789ABE00619A60 /* SelectionViewController.swift in Sources */,
 				A50520BA24789ABE00619A60 /* AppDelegate.swift in Sources */,
 			);
