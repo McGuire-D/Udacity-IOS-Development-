@@ -8,9 +8,9 @@
 
 import UIKit
 
-// MARK: - ChoiceViewController: UIViewController
+// MARK: - SelectionViewController: UIViewController
 
-class ChoiceViewController: UIViewController {
+class SelectionViewController: UIViewController {
     
     // MARK: Programming UI button
 

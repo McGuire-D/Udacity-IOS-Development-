@@ -125,9 +125,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50520C124789ABE00619A60 /* Main.storyboard in Resources */,
 				A50520C624789ABF00619A60 /* LaunchScreen.storyboard in Resources */,
 				A50520C324789ABF00619A60 /* Assets.xcassets in Resources */,
-				A50520C124789ABE00619A60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5D0210224795BDF000F5DC3 /* RoshamboViewController.swift in Sources */,
 				A50520BE24789ABE00619A60 /* SelectionViewController.swift in Sources */,
 				A50520BA24789ABE00619A60 /* AppDelegate.swift in Sources */,
+				A5D0210224795BDF000F5DC3 /* RoshamboViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
