@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: Text Field Delegate objects
     let emojiDelegate = EmojiTextFieldDelegate()
     let colorizerDelegate = ColorizerTextFieldDelegate()
+    let randomColorTextFieldDelegate = RandomColorTextFieldDelegate()
     
     // MARK: Life Cycle
     
