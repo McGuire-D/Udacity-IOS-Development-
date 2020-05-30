@@ -8,14 +8,47 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    
+    let zipCode = ZipCodeField()
+    let cash = CashTextField()
+    
+    @IBOutlet weak var textField1: UITextField!
+    @IBOutlet weak var textField2: UITextField!
+    @IBOutlet weak var textField3: UITextField!
+    @IBOutlet weak var textControl: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.textField1.delegate = self.cash
+        self.textField2.delegate = self.zipCode
+        self.textField3.delegate = self
+        
+        self.textControl.setOn(false, animated: false)
     }
-    @IBOutlet weak var CashTextField: UITextField!
     
-
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return self.textControl.isOn
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true;
+    }
+        
+    @IBAction func ButtonEditor(_ sender: AnyObject){
+        
+        if !(sender as! UISwitch).isOn {
+            self.textField3.resignFirstResponder()
+        }
+    }
+    
+    
+    
+    
 }
+    
+        
 

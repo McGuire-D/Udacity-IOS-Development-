@@ -14,8 +14,7 @@
 		A57FF2A9247EAE56000841C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57FF2A8247EAE56000841C2 /* Assets.xcassets */; };
 		A57FF2AC247EAE56000841C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57FF2AA247EAE56000841C2 /* LaunchScreen.storyboard */; };
 		A57FF2B7247EAF43000841C2 /* ZipCodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF2B6247EAF43000841C2 /* ZipCodeField.swift */; };
-		A57FF2B9247EAF58000841C2 /* CashTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF2B8247EAF58000841C2 /* CashTextField.swift */; };
-		A57FF2BB247EAF73000841C2 /* LockableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF2BA247EAF73000841C2 /* LockableTextField.swift */; };
+		A5EA29E22482CECD008F6310 /* CashTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA29E12482CECD008F6310 /* CashTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +27,7 @@
 		A57FF2AB247EAE56000841C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A57FF2AD247EAE56000841C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57FF2B6247EAF43000841C2 /* ZipCodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeField.swift; sourceTree = "<group>"; };
-		A57FF2B8247EAF58000841C2 /* CashTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTextField.swift; sourceTree = "<group>"; };
-		A57FF2BA247EAF73000841C2 /* LockableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockableTextField.swift; sourceTree = "<group>"; };
+		A5EA29E12482CECD008F6310 /* CashTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				A57FF2B6247EAF43000841C2 /* ZipCodeField.swift */,
-				A57FF2B8247EAF58000841C2 /* CashTextField.swift */,
-				A57FF2BA247EAF73000841C2 /* LockableTextField.swift */,
+				A5EA29E12482CECD008F6310 /* CashTextField.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -155,9 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A57FF2B9247EAF58000841C2 /* CashTextField.swift in Sources */,
 				A57FF2A4247EAE55000841C2 /* ViewController.swift in Sources */,
-				A57FF2BB247EAF73000841C2 /* LockableTextField.swift in Sources */,
+				A5EA29E22482CECD008F6310 /* CashTextField.swift in Sources */,
 				A57FF2A0247EAE55000841C2 /* AppDelegate.swift in Sources */,
 				A57FF2A2247EAE55000841C2 /* SceneDelegate.swift in Sources */,
 				A57FF2B7247EAF43000841C2 /* ZipCodeField.swift in Sources */,

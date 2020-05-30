@@ -15,23 +15,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fbh-uP-IvR">
-                                <rect key="frame" x="159" y="44" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-kQ-nCF">
+                                <rect key="frame" x="20" y="86" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6E-0w-nV6">
+                                <rect key="frame" x="20" y="128" width="317" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01b-wL-baN">
+                                <rect key="frame" x="345" y="131" width="51" height="31"/>
+                                <connections>
+                                    <action selector="ButtonEditor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTY-Gm-Sdu"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzr-0j-GbF">
+                                <rect key="frame" x="20" y="44" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f6E-0w-nV6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="7aS-gF-Car"/>
+                            <constraint firstItem="kzr-0j-GbF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EYI-3y-kQ8"/>
+                            <constraint firstItem="f6E-0w-nV6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lek-Ed-3NU"/>
+                            <constraint firstItem="f6E-0w-nV6" firstAttribute="top" secondItem="A9h-kQ-nCF" secondAttribute="bottom" constant="8" id="MKL-D4-P9l"/>
+                            <constraint firstItem="A9h-kQ-nCF" firstAttribute="leading" secondItem="f6E-0w-nV6" secondAttribute="leading" id="Rj9-Ve-r2N"/>
+                            <constraint firstItem="kzr-0j-GbF" firstAttribute="leading" secondItem="A9h-kQ-nCF" secondAttribute="leading" id="UFQ-Lp-H9U"/>
+                            <constraint firstItem="kzr-0j-GbF" firstAttribute="trailing" secondItem="A9h-kQ-nCF" secondAttribute="trailing" id="Wca-dz-eH0"/>
+                            <constraint firstItem="kzr-0j-GbF" firstAttribute="trailing" secondItem="01b-wL-baN" secondAttribute="trailing" id="awJ-gu-hxh"/>
+                            <constraint firstItem="f6E-0w-nV6" firstAttribute="bottom" secondItem="01b-wL-baN" secondAttribute="bottom" id="lS8-OG-AhU"/>
+                            <constraint firstItem="01b-wL-baN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="t5v-kc-xJ2"/>
+                            <constraint firstItem="01b-wL-baN" firstAttribute="leading" secondItem="f6E-0w-nV6" secondAttribute="trailing" constant="8" id="xw5-gR-JC6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="CashTextField" destination="Fbh-uP-IvR" id="tDo-Yi-Pz4"/>
+                        <outlet property="textControl" destination="01b-wL-baN" id="f8x-tO-nqo"/>
+                        <outlet property="textField1" destination="kzr-0j-GbF" id="Dqp-zj-4Vg"/>
+                        <outlet property="textField2" destination="A9h-kQ-nCF" id="JkH-g0-HC1"/>
+                        <outlet property="textField3" destination="f6E-0w-nV6" id="M0l-rB-DoN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
