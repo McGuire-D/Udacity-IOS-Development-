@@ -16,55 +16,86 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmb-Hu-SnM">
-                                <rect key="frame" x="2" y="813" width="414" height="49"/>
+                                <rect key="frame" x="2" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dKB-C6-8rg"/>
+                                </constraints>
                                 <items>
-                                    <barButtonItem title="Pick" image="archivebox" catalog="system" id="Ko5-eN-yKR">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PBx-KT-Vw5"/>
+                                    <barButtonItem title="Album" id="Ko5-eN-yKR">
                                         <connections>
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="1xm-Lz-C69"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="W78-JM-sQ6"/>
-                                    <barButtonItem style="plain" id="Ama-iL-mMN">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qCX-RX-zN1"/>
+                                    <barButtonItem title="Item" image="camera.fill" catalog="system" style="plain" id="Ama-iL-mMN">
+                                        <inset key="imageInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Bk-YH-KZZ">
-                                            <rect key="frame" x="370" y="15" width="24" height="24"/>
+                                            <rect key="frame" x="286.5" y="13" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <state key="normal" image="camera" catalog="system"/>
+                                            <state key="normal" image="camera.fill" catalog="system"/>
                                             <connections>
-                                                <action selector="Camera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kjy-Z4-i2J"/>
+                                                <action selector="Camera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZ6-l2-5A1"/>
                                             </connections>
                                         </button>
+                                        <connections>
+                                            <action selector="Camera:" destination="BYZ-38-t0r" id="FMV-Tx-d5F"/>
+                                        </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gdP-Ac-nyn"/>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kga-3K-0LB">
-                                <rect key="frame" x="0.0" y="246" width="414" height="405"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kga-3K-0LB">
+                                <rect key="frame" x="0.0" y="246" width="414" height="414"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Top" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcP-VP-QYc">
+                                <rect key="frame" x="0.0" y="266" width="414" height="34"/>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Bottom" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eK1-w4-TIx">
+                                <rect key="frame" x="0.0" y="606" width="414" height="34"/>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="kga-3K-0LB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BaO-1H-J6l"/>
+                            <constraint firstItem="kga-3K-0LB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KNC-ZB-74t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kga-3K-0LB" secondAttribute="bottom" constant="202" id="NZb-bF-m9a"/>
+                            <constraint firstAttribute="trailing" secondItem="eK1-w4-TIx" secondAttribute="trailing" id="aet-08-jNB"/>
                             <constraint firstAttribute="trailing" secondItem="cmb-Hu-SnM" secondAttribute="trailing" constant="-2" id="bdG-t7-ghF"/>
+                            <constraint firstAttribute="trailing" secondItem="lcP-VP-QYc" secondAttribute="trailing" id="cWA-su-GxO"/>
+                            <constraint firstItem="kga-3K-0LB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d0P-MT-2WR"/>
                             <constraint firstItem="cmb-Hu-SnM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="dbc-Zf-imB"/>
-                            <constraint firstItem="kga-3K-0LB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="erz-dA-1hU"/>
                             <constraint firstItem="cmb-Hu-SnM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fgY-Hx-f0e"/>
-                            <constraint firstItem="kga-3K-0LB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="202" id="gfY-wo-cGd"/>
-                            <constraint firstItem="kga-3K-0LB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-4.5" id="rk7-go-z7N"/>
+                            <constraint firstItem="lcP-VP-QYc" firstAttribute="top" secondItem="kga-3K-0LB" secondAttribute="top" constant="20" id="oyG-yf-uqD"/>
+                            <constraint firstItem="eK1-w4-TIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pkZ-im-YPO"/>
+                            <constraint firstItem="lcP-VP-QYc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="scr-HB-eat"/>
+                            <constraint firstItem="kga-3K-0LB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="xxp-C2-xbV"/>
+                            <constraint firstItem="eK1-w4-TIx" firstAttribute="bottom" secondItem="kga-3K-0LB" secondAttribute="bottom" constant="-20" id="yyH-9H-UOw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomText" destination="eK1-w4-TIx" id="ndP-5s-Gzk"/>
                         <outlet property="imagePickerView" destination="kga-3K-0LB" id="Fz1-JM-fGO"/>
                         <outlet property="toodleBar" destination="cmb-Hu-SnM" id="hZj-rf-c6k"/>
+                        <outlet property="topText" destination="lcP-VP-QYc" id="S5E-h2-pNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="83.705357142857139"/>
+            <point key="canvasLocation" x="-362.31884057971018" y="4.6875"/>
         </scene>
     </scenes>
     <resources>
-        <image name="archivebox" catalog="system" width="128" height="106"/>
-        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
     </resources>
 </document>
