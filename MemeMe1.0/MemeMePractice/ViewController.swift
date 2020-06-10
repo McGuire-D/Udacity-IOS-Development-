@@ -41,13 +41,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topToolBar: UIToolbar!
     
     var mainFont: UIFont?
-    let memeTextAttributes: [NSAttributedString.Key: Any] = [
-        // text attributes
-          .strokeColor: UIColor.purple,
-          .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-          .strokeWidth: -4,
-          .foregroundColor: UIColor.white,
-          ]
+    
+    
     
     @IBOutlet weak var imagePickerView: UIImageView!
     override func viewDidLoad() {
@@ -55,22 +50,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         topToolBar.isHidden = true
         toodleBar.isHidden = false
-        topText.defaultTextAttributes = memeTextAttributes
-        bottomText.defaultTextAttributes = memeTextAttributes
-        topText.delegate = self
-        bottomText.delegate = self
-        topText.textAlignment = .center
-        bottomText.textAlignment = .center
+        setupTextField(tf: topText, text: "TOP")
+        setupTextField(tf: bottomText, text: "BOTTOM")
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        topText.backgroundColor = .clear
-        bottomText.backgroundColor = .clear
-        topText.borderStyle = .none
-        bottomText.borderStyle = .none
         shareButton.isEnabled = false
     
     }
   
+    func setupTextField(tf: UITextField, text: String) {
+        tf.defaultTextAttributes = [
+            // text attributes
+            .strokeColor: UIColor.purple,
+            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            .strokeWidth: -4,
+            .foregroundColor: UIColor.white,
+            ]
+        tf.textColor = UIColor.white
+        tf.tintColor = UIColor.white
+        tf.textAlignment = .center
+        tf.text = text
+        tf.delegate = self
+        tf.backgroundColor = .clear
+    }
+
     @objc func keyboardWillHide(notification: NSNotification){
         // keyboard height when dismissed
         print("Keyboard hidden")
@@ -109,7 +112,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imagePicker.sourceType = .camera
             present(imagePicker, animated: true, completion: nil)
         } else {
-            let AC = UIAlertController(title: "NO CAMERA FOUND", message: "Buy a better phone", preferredStyle: .alert)
+            let AC = UIAlertController(title: "NO CAMERA FOUND", message: "No camera found on device", preferredStyle: .alert)
             AC.addAction(UIAlertAction(title: "OK", style: .cancel))
             present(AC, animated: true)
             
@@ -117,13 +120,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func pickAnImage(_ sender: Any) {
-        
         let pickerController = UIImagePickerController()
         pickerController.allowsEditing = true
         pickerController.delegate = self
         pickerController.sourceType = .photoLibrary
         present(pickerController, animated: true, completion: nil)
         
+    }
+    
+    func chooseImageFromCameraOrPhoto(source: UIImagePickerController.SourceType) {
+        // allows editing from camera
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        pickerController.sourceType = source
+        present(pickerController, animated: true, completion: nil)
     }
     
     @IBAction func share(_ sender: Any) {
@@ -137,7 +148,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func cancel(_ sender: Any) {
         //cancel button to refresh memeMe
         imagePickerView.image = nil
-        topText.text = "Top"
+        topText.text = "TOP"
         bottomText.text = "Bottom"
         topToolBar.isHidden = true
     }
