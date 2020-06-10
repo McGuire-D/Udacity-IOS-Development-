@@ -24,19 +24,21 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="PBx-KT-Vw5"/>
                                     <barButtonItem title="Album" id="Ko5-eN-yKR">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="1xm-Lz-C69"/>
+                                            <action selector="albumButtonTapped:" destination="BYZ-38-t0r" id="aPx-SY-7Se"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qCX-RX-zN1"/>
-                                    <barButtonItem title="Item" image="camera.fill" catalog="system" style="plain" id="Ama-iL-mMN">
+                                    <barButtonItem tag="1" title="Item" image="camera.fill" catalog="system" style="plain" id="Ama-iL-mMN">
                                         <inset key="imageInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Bk-YH-KZZ">
+                                        <button key="customView" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Bk-YH-KZZ">
                                             <rect key="frame" x="286.5" y="13" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <state key="normal" image="camera.fill" catalog="system"/>
                                             <connections>
                                                 <action selector="Camera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZ6-l2-5A1"/>
+                                                <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bbu-jp-2MQ"/>
+                                                <action selector="pickCameraOrPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uk2-pG-cc4"/>
                                             </connections>
                                         </button>
                                         <connections>

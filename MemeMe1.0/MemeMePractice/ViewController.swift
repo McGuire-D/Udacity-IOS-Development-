@@ -102,39 +102,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
         return keyboardSize.cgRectValue.height
     }
-    
-    @IBAction func Camera(_ sender: Any) {
-        // action for calling device camera
-        let imagePicker = UIImagePickerController()
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            imagePicker.delegate = self
-            imagePicker.sourceType = .camera
-            present(imagePicker, animated: true, completion: nil)
-        } else {
+
+    @IBAction func albumButtonTapped(_ sender: Any) {
+        let source: UIImagePickerController.SourceType = .photoLibrary
+        chooseImageFromCameraOrPhoto(source: source)
+    }
+    @IBAction func cameraButtonTapped(_ sender: Any) {
+        if !UIImagePickerController.isSourceTypeAvailable(.camera){
             let AC = UIAlertController(title: "NO CAMERA FOUND", message: "No camera found on device", preferredStyle: .alert)
             AC.addAction(UIAlertAction(title: "OK", style: .cancel))
             present(AC, animated: true)
+        } else {
+             let source: UIImagePickerController.SourceType = .camera
+                   chooseImageFromCameraOrPhoto(source: source)
+            }
             
-        }
-    }
-    
-    @IBAction func pickAnImage(_ sender: Any) {
-        let pickerController = UIImagePickerController()
-        pickerController.allowsEditing = true
-        pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
-        present(pickerController, animated: true, completion: nil)
-        
     }
     
     func chooseImageFromCameraOrPhoto(source: UIImagePickerController.SourceType) {
-        // allows editing from camera
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.allowsEditing = true
         pickerController.sourceType = source
         present(pickerController, animated: true, completion: nil)
     }
+
     
     @IBAction func share(_ sender: Any) {
         //allows image to be saved or shared
