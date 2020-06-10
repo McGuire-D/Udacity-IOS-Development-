@@ -39,12 +39,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cancel: UIBarButtonItem!
     @IBOutlet weak var topToolBar: UIToolbar!
+    @IBOutlet weak var imagePickerView: UIImageView!
     
     var mainFont: UIFont?
     
-    
-    
-    @IBOutlet weak var imagePickerView: UIImageView!
     override func viewDidLoad() {
         //viewDidLoad setting function calls for app
         super.viewDidLoad()
