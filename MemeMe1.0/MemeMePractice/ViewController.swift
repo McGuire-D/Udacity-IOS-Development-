@@ -46,6 +46,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         //viewDidLoad setting function calls for app
         super.viewDidLoad()
+        
         topToolBar.isHidden = true
         toodleBar.isHidden = false
         setupTextField(tf: topText, text: "TOP")
