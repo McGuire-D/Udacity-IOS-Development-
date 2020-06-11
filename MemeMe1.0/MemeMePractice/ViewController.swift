@@ -63,7 +63,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             .strokeColor: UIColor.purple,
             .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
             .strokeWidth: -4,
-            .foregroundColor: UIColor.white,
+            .foregroundColor: UIColor.clear,
             ]
         tf.textColor = UIColor.white
         tf.tintColor = UIColor.white
@@ -157,7 +157,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func save() {
-        _ = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imagePickerView.image!, editedImage: generateMemedImage())
+        // save function with check
+        let activityController = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
+
+        activityController.completionWithItemsHandler = { activity, completed, items, error in
+            if completed {
+                self.save()
+                self.dismiss(animated: true, completion: nil)
+                _ = Meme(topText: self.topText.text!, bottomText: self.bottomText.text!, originalImage: self.imagePickerView.image!, editedImage: self.generateMemedImage())
+            }
+        }
+
+        present(activityController, animated: true, completion: nil)
+        
+        
     }
     
     func generateMemedImage() -> UIImage{
