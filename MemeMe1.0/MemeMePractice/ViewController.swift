@@ -129,11 +129,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     
     @IBAction func share(_ sender: Any) {
+        // So, I he wants you to actually call save() in here
         //allows image to be saved or shared
         save().self
         let image = generateMemedImage()
         let ac = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         ac.addActivityViewControllerForiPad(activityController: ac)
+        // this should be your closure, lets see if it works?
+        ac.completionWithItemsHandler = { activity, completed, items, error in
+            if completed {
+                self.save()
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        // You know it's a closure becaue it's contained in { }
+        // That means it will be run AFTEr it's done. when it;s completed. So even though it's before present(), it doesn't get rununtil after
+        // Try to run it, let's see if it works
+        // I guess it worked?
+        // looks like it, let's check out yoru save method really quick
         present(ac, animated: true)
     }
     
@@ -155,24 +168,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true)
         
     }
+    //delete that part right?
     
     func save() {
         // save function with check
-        let activityController = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
-
-        activityController.completionWithItemsHandler = { activity, completed, items, error in
-            if completed {
-                self.save()
-                self.dismiss(animated: true, completion: nil)
-                _ = Meme(topText: self.topText.text!, bottomText: self.bottomText.text!, originalImage: self.imagePickerView.image!, editedImage: self.generateMemedImage())
-            }
+        _ = Meme(topText: self.topText.text!, bottomText: self.bottomText.text!, originalImage: self.imagePickerView.image!, editedImage: self.generateMemedImage())
         }
 
-        present(activityController, animated: true, completion: nil)
-        
-        
-    }
-    
     func generateMemedImage() -> UIImage{
         
         
