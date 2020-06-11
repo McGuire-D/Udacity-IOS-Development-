@@ -130,6 +130,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func share(_ sender: Any) {
         //allows image to be saved or shared
+        save().self
         let image = generateMemedImage()
         let ac = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         ac.addActivityViewControllerForiPad(activityController: ac)
