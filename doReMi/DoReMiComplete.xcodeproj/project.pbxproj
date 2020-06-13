@@ -98,6 +98,7 @@
 		4D673CC01A1C11BF00F01D25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Udacity;
 				TargetAttributes = {
