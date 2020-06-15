@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MemeMePractice
+//  MYOA
 //
-//  Created by Dustin McGuire on 6/1/20.
+//  Created by Dustin McGuire on 6/15/20.
 //  Copyright © 2020 Dustin McGuire. All rights reserved.
 //
 

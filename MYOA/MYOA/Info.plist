@@ -60,11 +60,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Making memes!</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Making memes!</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Making memes!</string>
 </dict>
 </plist>

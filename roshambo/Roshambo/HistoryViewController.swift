@@ -6,4 +6,14 @@
 //  Copyright © 2020 Dustin McGuire. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    var history: [RPSMatch]!
+    
+    // Outlet
+    
+}

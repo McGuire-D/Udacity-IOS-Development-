@@ -15,16 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VJe-iT-Rb6">
-                                <rect key="frame" x="97" y="149.5" width="220" height="227"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="suit.heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yZ1-cc-Ffi">
+                                <rect key="frame" x="0.0" y="159" width="414" height="495"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VJe-iT-Rb6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="AHf-oW-LqU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VJe-iT-Rb6" secondAttribute="bottom" constant="484.5" id="Bb5-GQ-BNQ"/>
-                            <constraint firstItem="VJe-iT-Rb6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="Kxg-Ou-JiZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VJe-iT-Rb6" secondAttribute="trailing" constant="97" id="RBM-RG-PaZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yZ1-cc-Ffi" secondAttribute="trailing" id="MdO-4w-yXs"/>
+                            <constraint firstItem="yZ1-cc-Ffi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113.5" id="Xgy-Q9-uC1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZ1-cc-Ffi" secondAttribute="bottom" constant="207" id="sgj-XL-xRN"/>
+                            <constraint firstItem="yZ1-cc-Ffi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vvp-ta-d5q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
     </resources>
 </document>

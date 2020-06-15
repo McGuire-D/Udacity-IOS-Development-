@@ -25,6 +25,10 @@ enum Shape: String {
 
 class ResultsViewController: UIViewController {
     
+    // adding history
+    
+    var history = [RPSMatch]()
+    
     // MARK: Outlets
 
     @IBOutlet private weak var resultImage: UIImageView!
@@ -68,6 +72,25 @@ class ResultsViewController: UIViewController {
         imageName = imageName.lowercased()
         resultImage.image = UIImage(named: imageName)
         resultLabel.text = text
+    }
+    
+    func throwDown(_ playersMove: RPS) {
+        let computersMove = RPS()
+        let match = RPSMatch(p1: playersMove, p2: computersMove)
+        
+        // adding to history
+        history.append(match)
+        
+        // getting Storyboard and ResultViewController
+        let storyboard = UIStoryboard (name: "Main", bundle: nil)
+        let resultVC = storyboard.instantiateInitialViewController(withIdentifier: "ResultViewController") as! ResultsViewController
+        
+        // tell the match to ResultsViewController
+        resultVC.match = match
+        
+        self.present(resultVC, animated: true, completion: nil)
+        
+        
     }
 
     // MARK: Actions

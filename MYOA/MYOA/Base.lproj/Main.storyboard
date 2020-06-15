@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NQ5-Al-uq1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gfd-Hx-Dgh">
+            <objects>
+                <navigationController id="NQ5-Al-uq1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Kv3-rF-J5V"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H3F-sg-ARb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5ja-z4-Kja" kind="relationship" relationship="rootViewController" id="nM9-hv-kVb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQB-jY-zns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1235" y="48"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="85l-EY-6TR">
+            <objects>
+                <viewController id="5ja-z4-Kja" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cZ5-kn-vgW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysz-jk-7i8">
+                                <rect key="frame" x="97.5" y="493" width="219" height="30"/>
+                                <state key="normal" title="Leap through the door and roar!"/>
+                                <connections>
+                                    <segue destination="1b8-ce-zjs" kind="push" id="sTJ-R2-3gc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgT-Xw-Sv7">
+                                <rect key="frame" x="67" y="574" width="280" height="30"/>
+                                <state key="normal" title="Stalk to the door, peek down the hallway."/>
+                                <connections>
+                                    <segue destination="iyf-aS-6eo" kind="push" id="7RB-U9-LEH"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9fd-r1-pgH">
+                                <rect key="frame" x="50" y="154" width="315" height="331"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="331" id="ldq-N8-HRa"/>
+                                </constraints>
+                                <string key="text">An immense tiger wakes in an empty room. 
+
+A door opens into a hallway...
+    
+What should you do?</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9fd-r1-pgH" firstAttribute="leading" secondItem="pkF-mL-IDA" secondAttribute="leading" constant="50" id="3eG-hh-aYP"/>
+                            <constraint firstItem="9fd-r1-pgH" firstAttribute="top" secondItem="pkF-mL-IDA" secondAttribute="top" constant="66" id="NzJ-ij-cye"/>
+                            <constraint firstItem="9fd-r1-pgH" firstAttribute="centerX" secondItem="cZ5-kn-vgW" secondAttribute="centerX" id="QXB-Pm-CmS"/>
+                            <constraint firstItem="9fd-r1-pgH" firstAttribute="centerX" secondItem="sgT-Xw-Sv7" secondAttribute="centerX" id="mlt-T4-mpP"/>
+                            <constraint firstItem="9fd-r1-pgH" firstAttribute="centerX" secondItem="ysz-jk-7i8" secondAttribute="centerX" id="mmF-Ds-o6D"/>
+                            <constraint firstItem="ysz-jk-7i8" firstAttribute="top" secondItem="9fd-r1-pgH" secondAttribute="bottom" constant="8" id="o8C-rO-VL4"/>
+                            <constraint firstItem="sgT-Xw-Sv7" firstAttribute="top" secondItem="ysz-jk-7i8" secondAttribute="bottom" constant="51" id="rgi-vO-Mpx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pkF-mL-IDA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Ce-ki-A1K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CyM-cp-4WS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167" y="48"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="t3a-hm-HFx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1R0-5U-rK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="1b8-ce-zjs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQL-AI-WGj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MsP-0u-vie">
+                                <rect key="frame" x="0.0" y="238" width="414" height="420"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">That was unwise.
+
+The tiger round house kicks you in the face. Then proceeds to maul you.
+
+You Have Died.
+
+</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MsP-0u-vie" firstAttribute="centerY" secondItem="tQL-AI-WGj" secondAttribute="centerY" id="RjH-pH-B2w"/>
+                            <constraint firstItem="MsP-0u-vie" firstAttribute="leading" secondItem="IJG-7Z-zj2" secondAttribute="leading" id="gK8-os-MU6"/>
+                            <constraint firstItem="IJG-7Z-zj2" firstAttribute="trailing" secondItem="MsP-0u-vie" secondAttribute="trailing" id="u2h-Kd-jOp"/>
+                            <constraint firstItem="MsP-0u-vie" firstAttribute="top" secondItem="IJG-7Z-zj2" secondAttribute="top" constant="150" id="ykG-h7-Izf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IJG-7Z-zj2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BTd-9g-jel"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1215.9420289855072" y="27.455357142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="k6W-Fq-Mim">
+            <objects>
+                <viewController id="iyf-aS-6eo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nnb-4I-2Vg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a00-3R-g3D">
+                                <rect key="frame" x="0.0" y="588" width="414" height="30"/>
+                                <state key="normal" title="Challenge the tiger in one on one combat!"/>
+                                <connections>
+                                    <segue destination="1b8-ce-zjs" kind="push" id="NSr-0v-V9Z"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5yG-CI-Y7O">
+                                <rect key="frame" x="50" y="118" width="314" height="348"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">You see a rope holding a massive chandelier above the tigers head.
+
+It looks like the rope could be loosned to drop on the tiger.
+
+What should you do?
+</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDS-Jt-lcW">
+                                <rect key="frame" x="0.0" y="512" width="414" height="30"/>
+                                <state key="normal" title="Loosen the rope."/>
+                                <connections>
+                                    <segue destination="IRD-Ij-VfC" kind="push" id="LfF-KZ-c7S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5yG-CI-Y7O" firstAttribute="top" secondItem="5Zp-ls-3yo" secondAttribute="top" constant="30" id="6nX-Er-KcE"/>
+                            <constraint firstItem="5yG-CI-Y7O" firstAttribute="leading" secondItem="5Zp-ls-3yo" secondAttribute="leading" constant="50" id="Ang-PM-mlH"/>
+                            <constraint firstItem="DDS-Jt-lcW" firstAttribute="leading" secondItem="5Zp-ls-3yo" secondAttribute="leading" id="Brr-Ze-N0Z"/>
+                            <constraint firstItem="a00-3R-g3D" firstAttribute="leading" secondItem="5Zp-ls-3yo" secondAttribute="leading" id="K1d-rp-2eX"/>
+                            <constraint firstItem="DDS-Jt-lcW" firstAttribute="top" secondItem="5yG-CI-Y7O" secondAttribute="bottom" constant="46" id="NJZ-LY-GLV"/>
+                            <constraint firstItem="5Zp-ls-3yo" firstAttribute="trailing" secondItem="DDS-Jt-lcW" secondAttribute="trailing" id="USe-ed-adQ"/>
+                            <constraint firstItem="DDS-Jt-lcW" firstAttribute="top" secondItem="5Zp-ls-3yo" secondAttribute="top" constant="424" id="VKI-0s-TVd"/>
+                            <constraint firstItem="a00-3R-g3D" firstAttribute="top" secondItem="DDS-Jt-lcW" secondAttribute="bottom" constant="46" id="aLH-VY-Wq0"/>
+                            <constraint firstItem="5yG-CI-Y7O" firstAttribute="centerX" secondItem="DDS-Jt-lcW" secondAttribute="centerX" id="blF-JP-ZCK"/>
+                            <constraint firstItem="5Zp-ls-3yo" firstAttribute="trailing" secondItem="a00-3R-g3D" secondAttribute="trailing" id="iHr-TV-SNj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Zp-ls-3yo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tY4-1F-cjU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65r-Px-v0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168" y="872"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eHK-sQ-1rY">
+            <objects>
+                <viewController id="IRD-Ij-VfC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T4b-3e-8iP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SJT-Sy-l5B">
+                                <rect key="frame" x="0.0" y="138" width="414" height="367"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="m3J-sw-0eN"/>
+                                </constraints>
+                                <string key="text">The chandelier comes free and crashes down on the unsuspecting tiger.
+
+You have won but feel terrible for killing such a majestic beast.
+
+The End.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SJT-Sy-l5B" firstAttribute="top" secondItem="a54-32-dbm" secondAttribute="top" constant="50" id="DOz-yI-h2B"/>
+                            <constraint firstItem="SJT-Sy-l5B" firstAttribute="leading" secondItem="a54-32-dbm" secondAttribute="leading" id="PFi-iC-0hN"/>
+                            <constraint firstItem="a54-32-dbm" firstAttribute="trailing" secondItem="SJT-Sy-l5B" secondAttribute="trailing" id="hQG-dt-dOw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a54-32-dbm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SkI-5a-kCC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvz-IS-kxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276.8115942028987" y="871.875"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NSr-0v-V9Z"/>
+    </inferredMetricsTieBreakers>
+</document>

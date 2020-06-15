@@ -64,10 +64,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXP-by-fna">
+                                <rect key="frame" x="174" y="67" width="66" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <segue destination="pMP-b1-NlJ" kind="show" id="yDs-id-GVc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Zaw-s6-RrK" firstAttribute="top" secondItem="c5K-Gc-hhF" secondAttribute="bottom" constant="24" id="IUp-aR-aSC"/>
+                            <constraint firstItem="kXP-by-fna" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N9f-wE-htt"/>
+                            <constraint firstItem="kXP-by-fna" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="Nwf-T2-aUF"/>
                             <constraint firstItem="XxT-Bn-ZA6" firstAttribute="top" secondItem="c5K-Gc-hhF" secondAttribute="bottom" constant="24" id="Sz7-KA-Quu"/>
                             <constraint firstAttribute="centerX" secondItem="XrR-ma-XPO" secondAttribute="centerX" id="ZPB-h2-lnd"/>
                             <constraint firstItem="XrR-ma-XPO" firstAttribute="top" secondItem="XxT-Bn-ZA6" secondAttribute="bottom" constant="24" id="ZUU-m0-zrz"/>
@@ -80,7 +90,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="MuD-5l-He4">
+            <objects>
+                <viewController title="History" id="pMP-b1-NlJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kqr-ry-eRD"/>
+                        <viewControllerLayoutGuide type="bottom" id="CfM-id-L9e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Jg-VL-enj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lbv-qh-xsv">
+                                <rect key="frame" x="20" y="0.0" width="374" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lbv-qh-xsv" firstAttribute="leading" secondItem="5Jg-VL-enj" secondAttribute="leadingMargin" id="Frt-3K-S0p"/>
+                            <constraint firstItem="Lbv-qh-xsv" firstAttribute="top" secondItem="Kqr-ry-eRD" secondAttribute="bottom" id="IzP-Rs-Abe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lbv-qh-xsv" secondAttribute="trailing" id="ON2-PG-oCH"/>
+                            <constraint firstItem="CfM-id-L9e" firstAttribute="top" secondItem="Lbv-qh-xsv" secondAttribute="bottom" id="hwv-TV-6ea"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AgV-N8-Xm2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7R-OA-mRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520.28985507246375" y="1091.5178571428571"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="Srx-iu-Xq7">
