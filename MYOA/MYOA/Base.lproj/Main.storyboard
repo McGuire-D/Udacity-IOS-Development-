@@ -27,7 +27,7 @@
         <!--View Controller-->
         <scene sceneID="85l-EY-6TR">
             <objects>
-                <viewController id="5ja-z4-Kja" sceneMemberID="viewController">
+                <viewController id="5ja-z4-Kja" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cZ5-kn-vgW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,8 +83,7 @@ What should you do?</string>
         <!--View Controller-->
         <scene sceneID="t3a-hm-HFx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1R0-5U-rK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="1b8-ce-zjs" sceneMemberID="viewController">
+                <viewController id="1b8-ce-zjs" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tQL-AI-WGj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,13 +114,14 @@ You Have Died.
                     </view>
                     <navigationItem key="navigationItem" id="BTd-9g-jel"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1R0-5U-rK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1215.9420289855072" y="27.455357142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="k6W-Fq-Mim">
             <objects>
-                <viewController id="iyf-aS-6eo" sceneMemberID="viewController">
+                <viewController id="iyf-aS-6eo" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nnb-4I-2Vg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +178,7 @@ What should you do?
         <!--View Controller-->
         <scene sceneID="eHK-sQ-1rY">
             <objects>
-                <viewController id="IRD-Ij-VfC" sceneMemberID="viewController">
+                <viewController id="IRD-Ij-VfC" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T4b-3e-8iP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
