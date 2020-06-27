@@ -30,7 +30,10 @@ extension UIViewController {
     }
 }
 
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
+   
     
     
     @IBOutlet weak var toodleBar: UIToolbar!
@@ -54,7 +57,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         shareButton.isEnabled = false
-    
+        
+        
     }
   
     func setupTextField(tf: UITextField, text: String) {
@@ -127,10 +131,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(pickerController, animated: true, completion: nil)
     }
 
+    var memes: [Meme]!{
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        return appDelegate.memes
+        }
     
     @IBAction func share(_ sender: Any) {
         // So, I he wants you to actually call save() in here
         //allows image to be saved or shared
+        
         save().self
         let image = generateMemedImage()
         let ac = UIActivityViewController(activityItems: [image], applicationActivities: nil)
@@ -168,11 +178,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true)
         
     }
-    //delete that part right?
+    
+    
     
     func save() {
         // save function with check
         _ = Meme(topText: self.topText.text!, bottomText: self.bottomText.text!, originalImage: self.imagePickerView.image!, editedImage: self.generateMemedImage())
+        
+        // adding to Array
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(contentsOf: memes)
         }
 
     func generateMemedImage() -> UIImage{
