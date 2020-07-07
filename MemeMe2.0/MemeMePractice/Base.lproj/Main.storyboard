@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="xIg-qU-mZa">
             <objects>
                 <navigationController id="5pA-iL-99n" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0zK-9i-haL"/>
+                    <tabBarItem key="tabBarItem" title="" image="table.fill" catalog="system" selectedImage="table.fill" id="0zK-9i-haL"/>
                     <navigationItem key="navigationItem" id="2Zi-HC-Fzd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TJ7-HJ-Gaa">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="-1651" y="653"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="V3r-lq-HLt">
             <objects>
                 <navigationController id="xR6-h1-vNN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aTp-4L-Taj"/>
+                    <tabBarItem key="tabBarItem" title="" image="line.horizontal.3" catalog="system" selectedImage="line.horizontal.3" id="aTp-4L-Taj"/>
                     <navigationItem key="navigationItem" id="toA-Zh-Mdx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VaP-Q7-4aO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -103,7 +103,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="iZ4-Mw-q6v"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="memeSegue" id="iZ4-Mw-q6v"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -111,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqS-g2-QCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-704.34782608695662" y="-704.46428571428567"/>
+            <point key="canvasLocation" x="-704" y="-735"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oqv-sY-XO1">
@@ -163,7 +163,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMePractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="memeMaker" id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMePractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,12 +320,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8lT-z2-r2d"/>
+        <segue reference="iZ4-Mw-q6v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="table.fill" catalog="system" width="128" height="93"/>
     </resources>
 </document>

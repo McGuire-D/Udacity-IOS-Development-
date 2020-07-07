@@ -46,9 +46,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var mainFont: UIFont?
     
+   
+    weak var delegate: TableViewController!
+   
+    
     override func viewDidLoad() {
         //viewDidLoad setting function calls for app
         super.viewDidLoad()
+        
         
         topToolBar.isHidden = true
         toodleBar.isHidden = false
@@ -61,6 +66,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
   
+    
     func setupTextField(tf: UITextField, text: String) {
         tf.defaultTextAttributes = [
             // text attributes
@@ -149,7 +155,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.save()
                 self.dismiss(animated: true, completion: nil)
                 self.navigationController?.popViewController(animated: true)
-                
+                self.delegate.tableView.reloadData()
+            
             }
             
         }
@@ -187,6 +194,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let appDelegate = object as! AppDelegate
         
         appDelegate.memes.append(meme)
+        
     }
 
     func generateMemedImage() -> UIImage{

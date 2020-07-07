@@ -12,6 +12,15 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.layoutIfNeeded()
+        tableView.rowHeight = 100
+    }
+    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+        if let target = segue.destination as? ViewController {
+            target.delegate = self
+        }
+            
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -43,4 +52,6 @@ class TableViewController: UITableViewController {
         memeDetail.detailMeme = meme
         navigationController?.pushViewController(memeDetail, animated: true)
     }
+    
+
 }
