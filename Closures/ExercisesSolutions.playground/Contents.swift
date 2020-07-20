@@ -88,7 +88,7 @@ let pricesInRupees = [750, 825, 2000, 725]
 //:Use the map() method to transform the group members' racing times. Using the oldTimes array and the two helper functions provided below, create a new array of String values called goalTimes. Assume it's been 13 years since graduation.
 
 func timeIntervalFromString(_ timeString: String) -> Int {
-    var timeArray = timeString.components(separatedBy: ":")
+    let timeArray = timeString.components(separatedBy: ":")
     let minutes = Int(String(timeArray[0]))!
     let seconds = Int(String(timeArray[1]))!
     return seconds + (minutes * 60)
@@ -113,3 +113,4 @@ var goalTimes = oldTimes.map(){(time: String) -> String in
 
 
 
+//
