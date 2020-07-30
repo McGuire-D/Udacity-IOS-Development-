@@ -56,7 +56,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         UdacityClient.getStudentLocations() { locations, error in
             
             if error != nil {
-                self.showAlert(message: error?.localizedDescription ?? "Error", title: "Error")
+                self.showAlert(message: error?.localizedDescription ?? "Data Not Found", title: "Error")
             }
             
             self.mapView.removeAnnotations(self.annotations)
