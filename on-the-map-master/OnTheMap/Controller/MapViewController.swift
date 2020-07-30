@@ -28,6 +28,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         getStudentsPins()
+        
     }
     
     // MARK: Logout
@@ -53,6 +54,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func getStudentsPins() {
         self.activityIndicator.startAnimating()
         UdacityClient.getStudentLocations() { locations, error in
+            
+            if error != nil {
+                self.showAlert(message: error?.localizedDescription ?? "Error", title: "Error")
+            }
+            
             self.mapView.removeAnnotations(self.annotations)
             self.annotations.removeAll()
             self.locations = locations ?? []
