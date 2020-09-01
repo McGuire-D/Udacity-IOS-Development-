@@ -56,15 +56,31 @@
 		A51BB23724F883F500472C39 /* Virtual Tourist */ = {
 			isa = PBXGroup;
 			children = (
-				A51BB23824F883F500472C39 /* AppDelegate.swift */,
-				A51BB23A24F883F500472C39 /* SceneDelegate.swift */,
-				A51BB23C24F883F500472C39 /* ViewController.swift */,
-				A51BB23E24F883F500472C39 /* Main.storyboard */,
+				A570EC3424FF067300E43A52 /* ViewControllers */,
+				A570EC3224FF054400E43A52 /* Storyboard */,
 				A51BB24124F883F600472C39 /* Assets.xcassets */,
-				A51BB24324F883F600472C39 /* LaunchScreen.storyboard */,
 				A51BB24624F883F600472C39 /* Info.plist */,
 			);
 			path = "Virtual Tourist";
+			sourceTree = "<group>";
+		};
+		A570EC3224FF054400E43A52 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A51BB23824F883F500472C39 /* AppDelegate.swift */,
+				A51BB23E24F883F500472C39 /* Main.storyboard */,
+				A51BB24324F883F600472C39 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A570EC3424FF067300E43A52 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A51BB23A24F883F500472C39 /* SceneDelegate.swift */,
+				A51BB23C24F883F500472C39 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
