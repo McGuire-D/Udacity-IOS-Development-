@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50FECD025006B4800139EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50FECCE25006B4800139EFA /* Main.storyboard */; };
 		A51BB23924F883F500472C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BB23824F883F500472C39 /* AppDelegate.swift */; };
 		A51BB23D24F883F500472C39 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BB23C24F883F500472C39 /* MapViewController.swift */; };
-		A51BB24024F883F500472C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51BB23E24F883F500472C39 /* Main.storyboard */; };
 		A51BB24224F883F600472C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51BB24124F883F600472C39 /* Assets.xcassets */; };
 		A51BB24524F883F600472C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51BB24324F883F600472C39 /* LaunchScreen.storyboard */; };
 		A570EC3624FF0CE800E43A52 /* FlickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570EC3524FF0CE800E43A52 /* FlickrClient.swift */; };
@@ -29,10 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A50FECCF25006B4800139EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../../untitled folder/Virtual-Tourist-master/VirtualTourist/Storyboards/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		A51BB23524F883F500472C39 /* Virtual Tourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Tourist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51BB23824F883F500472C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51BB23C24F883F500472C39 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A51BB23F24F883F500472C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A51BB24124F883F600472C39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A51BB24424F883F600472C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51BB24624F883F600472C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		A570EC3224FF054400E43A52 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				A51BB23E24F883F500472C39 /* Main.storyboard */,
+				A50FECCE25006B4800139EFA /* Main.storyboard */,
 				A51BB24324F883F600472C39 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -214,7 +214,7 @@
 			files = (
 				A51BB24524F883F600472C39 /* LaunchScreen.storyboard in Resources */,
 				A51BB24224F883F600472C39 /* Assets.xcassets in Resources */,
-				A51BB24024F883F500472C39 /* Main.storyboard in Resources */,
+				A50FECD025006B4800139EFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +247,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A51BB23E24F883F500472C39 /* Main.storyboard */ = {
+		A50FECCE25006B4800139EFA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A51BB23F24F883F500472C39 /* Base */,
+				A50FECCF25006B4800139EFA /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
