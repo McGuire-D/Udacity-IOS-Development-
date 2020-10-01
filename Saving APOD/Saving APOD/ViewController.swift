@@ -45,7 +45,7 @@ extension NSMutableAttributedString {
 }
 
 class ViewController: UIViewController, datePickerDelegate {
-    let apiKey : String = "DEMO_KEY" // replace API key with https://api.nasa.gov/index.html#apply-for-an-api-key
+    
 
     @IBOutlet weak var ViewImage: UIImageView!
     @IBOutlet weak var TextBox: UITextView!
