@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-
+/*
 class SpinnerViewController: UIViewController {
     var spinner = UIActivityIndicatorView(style: .UIActivityIndicatorView.Style.medium)
 
@@ -25,3 +25,4 @@ class SpinnerViewController: UIViewController {
         spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
+*/
