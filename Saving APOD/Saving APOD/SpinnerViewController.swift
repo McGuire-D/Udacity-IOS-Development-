@@ -7,11 +7,9 @@
 //
 
 import Foundation
-import UIKit
-
-/*
+import UIKit/*
 class SpinnerViewController: UIViewController {
-    var spinner = UIActivityIndicatorView(style: .UIActivityIndicatorView.Style.medium)
+    var spinner = UIActivityIndicatorProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)View(style: .UIActivityIndicatorView.Style.medium)
 
     override func loadView() {
         view = UIView()
@@ -26,3 +24,4 @@ class SpinnerViewController: UIViewController {
     }
 }
 */
+
