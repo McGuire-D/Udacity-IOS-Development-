@@ -72,6 +72,18 @@ class ViewController: UIViewController, datePickerDelegate {
         performSegue(withIdentifier: "pickDate", sender: self)
     }
     
+    
+    @IBAction func favorites(_ sender: Any) {
+        if ViewImage.image != nil {
+            let image = ViewImage.image
+            if let data = image!.pngData() {
+                let filename = getDocumentsDirectory().appendingPathComponent(UUID().uuidString)
+                try? data.write(to: filename)
+                
+            }
+        }
+    }
+    
     func updateViews(photoInfo: photoInfo) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: photoInfo.url) {
