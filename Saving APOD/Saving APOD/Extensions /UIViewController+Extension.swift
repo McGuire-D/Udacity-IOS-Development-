@@ -37,22 +37,51 @@ extension UIViewController {
             //UIApplication.shared.endIgnoringInteractionEvents()
         }
     }
+    // MARK: NSKeydArchiverUnarchiver
+    func saveObject(fileName: String, object: Any) {
+        
+        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)
+            try data.write(to: filePath)
+        } catch {
+            print("error is: \(error.localizedDescription)")
+        }
+    }
+    func getObject(fileName: String) -> Any? {
+        
+        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)
+        do {
+            let data = try Data(contentsOf: filePath)
+            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
+            return object
+        } catch {
+            print("error is: \(error.localizedDescription)")
+        }
+        return nil
+    }
+    
+    // MARK: Path Helpers
+    func getDirectoryPath() -> URL {
+        let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return arrayPaths[0]
+    }
 }
 
 public final class ObjectAssociation<T: AnyObject> {
-
+    
     private let policy: objc_AssociationPolicy
-
+    
     /// - Parameter policy: An association policy that will be used when linking objects.
     public init(policy: objc_AssociationPolicy = .OBJC_ASSOCIATION_RETAIN_NONATOMIC) {
-
+        
         self.policy = policy
     }
-
+    
     /// Accesses associated object.
     /// - Parameter index: An object whose associated object is to be accessed.
     public subscript(index: AnyObject) -> T? {
-
+        
         get { return objc_getAssociatedObject(index, Unmanaged.passUnretained(self).toOpaque()) as! T? }
         set { objc_setAssociatedObject(index, Unmanaged.passUnretained(self).toOpaque(), newValue, policy) }
     }

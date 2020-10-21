@@ -10,6 +10,21 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+class FavoritePictures: NSObject, NSCoding {
+    let data: Data?
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(self.data, forKey: "data")
+    }
+    
+    required init(coder: NSCoder) {
+        self.data = coder.decodeObject(forKey: "data") as? Data
+    }
+    
+    init(data: Data) {
+        self.data = data
+    }
+}
 
 class CollectionViewController: UICollectionViewController {
 

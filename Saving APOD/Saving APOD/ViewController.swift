@@ -77,9 +77,15 @@ class ViewController: UIViewController, datePickerDelegate {
         if ViewImage.image != nil {
             let image = ViewImage.image
             if let data = image!.pngData() {
-                let filename = getDocumentsDirectory().appendingPathComponent(UUID().uuidString)
+               /* let filename = self.getDirectoryPath().appendingPathComponent(UUID().uuidString)
                 try? data.write(to: filename)
-                
+               */
+                var favoritePictures: [FavoritePictures] = []
+                let picture = FavoritePictures(data: data)
+                favoritePictures.append(picture)
+                self.saveObject(fileName: "FavoriteList", object: favoritePictures)
+                let steven = self.getObject(fileName: "FavoriteList")
+                var junk = 10
             }
         }
     }
@@ -184,10 +190,6 @@ class ViewController: UIViewController, datePickerDelegate {
         if let vc = segue.destination as? datePickerViewController {
             vc.delegate = self
         }
-    }
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
     }
 }
 
