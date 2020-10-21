@@ -15,7 +15,9 @@
 		A58CDB1425104FE500984C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CDB1325104FE500984C25 /* ViewController.swift */; };
 		A58CDB1925104FE600984C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58CDB1825104FE600984C25 /* Assets.xcassets */; };
 		A58CDB1C25104FE600984C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CDB1A25104FE600984C25 /* LaunchScreen.storyboard */; };
-		A58ED6C72525692D00A3449D /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58ED6C62525692D00A3449D /* SpinnerViewController.swift */; };
+		A5F68E77253FC3C5001FB657 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F68E76253FC3C5001FB657 /* UIViewController+Extension.swift */; };
+		A5F68E7A253FC491001FB657 /* UIActivityIndicatorView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F68E79253FC491001FB657 /* UIActivityIndicatorView+Extension.swift */; };
+		A5F68E7D253FCCD8001FB657 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F68E7C253FCCD8001FB657 /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		A58CDB1825104FE600984C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A58CDB1B25104FE600984C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58CDB1D25104FE600984C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A58ED6C62525692D00A3449D /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		A5F68E76253FC3C5001FB657 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		A5F68E79253FC491001FB657 /* UIActivityIndicatorView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Extension.swift"; sourceTree = "<group>"; };
+		A5F68E7C253FCCD8001FB657 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +66,28 @@
 		A58CDB0E25104FE500984C25 /* Saving APOD */ = {
 			isa = PBXGroup;
 			children = (
+				A5F68E75253FC384001FB657 /* Extensions  */,
 				A58CDB0F25104FE500984C25 /* AppDelegate.swift */,
 				A58CDB1125104FE500984C25 /* SceneDelegate.swift */,
 				A542FB82251C298400DD36AF /* API.swift */,
 				A58CDB1325104FE500984C25 /* ViewController.swift */,
+				A5F68E7C253FCCD8001FB657 /* CollectionViewController.swift */,
 				A51FB7B02512FA3D00CEDC42 /* Main.storyboard */,
-				A58ED6C62525692D00A3449D /* SpinnerViewController.swift */,
 				A58CDB1825104FE600984C25 /* Assets.xcassets */,
 				A51FB7AE2512F62300CEDC42 /* datePickerViewController.swift */,
 				A58CDB1A25104FE600984C25 /* LaunchScreen.storyboard */,
 				A58CDB1D25104FE600984C25 /* Info.plist */,
 			);
 			path = "Saving APOD";
+			sourceTree = "<group>";
+		};
+		A5F68E75253FC384001FB657 /* Extensions  */ = {
+			isa = PBXGroup;
+			children = (
+				A5F68E76253FC3C5001FB657 /* UIViewController+Extension.swift */,
+				A5F68E79253FC491001FB657 /* UIActivityIndicatorView+Extension.swift */,
+			);
+			path = "Extensions ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,12 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F68E77253FC3C5001FB657 /* UIViewController+Extension.swift in Sources */,
 				A51FB7AF2512F62300CEDC42 /* datePickerViewController.swift in Sources */,
 				A58CDB1425104FE500984C25 /* ViewController.swift in Sources */,
 				A58CDB1025104FE500984C25 /* AppDelegate.swift in Sources */,
+				A5F68E7D253FCCD8001FB657 /* CollectionViewController.swift in Sources */,
 				A58CDB1225104FE500984C25 /* SceneDelegate.swift in Sources */,
-				A58ED6C72525692D00A3449D /* SpinnerViewController.swift in Sources */,
 				A542FB83251C298400DD36AF /* API.swift in Sources */,
+				A5F68E7A253FC491001FB657 /* UIActivityIndicatorView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

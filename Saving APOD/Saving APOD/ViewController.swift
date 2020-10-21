@@ -48,7 +48,7 @@ class ViewController: UIViewController, datePickerDelegate {
     var networkManager: NetworkManager?
     
     let apiKey : String = "DEMO_KEY" // replace API key with https://api.nasa.gov/index.html#apply-for-an-api-key
-
+    
     @IBOutlet weak var LoadSpinner: UIActivityIndicatorView!
     @IBOutlet weak var ViewImage: UIImageView!
     @IBOutlet weak var TextBox: UITextView!
@@ -72,12 +72,16 @@ class ViewController: UIViewController, datePickerDelegate {
         performSegue(withIdentifier: "pickDate", sender: self)
     }
     
-    func loadImage(url: URL) {
+    func updateViews(photoInfo: photoInfo) {
         DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
+            if let data = try? Data(contentsOf: photoInfo.url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
+                        self?.TextBox.text = photoInfo.title + photoInfo.description
                         self?.ViewImage.image = image
+                        self?.stopIndicatingActivity()
+                        
+                        
                     }
                 }
             }
@@ -85,38 +89,38 @@ class ViewController: UIViewController, datePickerDelegate {
     }
     
     func dateChanged(date: Date) {
-//        convertData(date: date)
+        //        convertData(date: date)
         requestApod(date: date)
     }
     
- 
+    
     func requestApod(date: Date) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
         
         let urlString = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey + "&date=" + dateFormatter.string(from: date)
-    
+        
+        self.startIndicatingActivity()
+        
         networkManager?.makeGetRequest(urlString: urlString) { completion in
             switch completion {
             case .success(let data):
                 if let photoInfo = try? JSONDecoder().decode(photoInfo.self, from: data) {
-                    self.loadImage(url: photoInfo.url)
-                    DispatchQueue.main.async {
-                        self.TextBox.text = photoInfo.title + photoInfo.description
-                    }
+                    self.updateViews(photoInfo: photoInfo)
                 }
-                
-            
-            case .failure(let error):
+            case .failure( _):
+                DispatchQueue.main.async {
+                    self.stopIndicatingActivity()
+                }
                 print("oops")
-                // oops
+            // oops
             }
         }
-
+        
     }
     
-
-
+    
+    
     
     private func errorHandlerResp(data: Data?, response: URLResponse?, error: Error?) -> Bool {
         let httpResponse = response as! HTTPURLResponse
@@ -155,10 +159,10 @@ class ViewController: UIViewController, datePickerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         networkManager = NetworkManager()
-//        convertData(date: Date.init()
+        //        convertData(date: Date.init()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -167,9 +171,11 @@ class ViewController: UIViewController, datePickerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? datePickerViewController {
             vc.delegate = self
-             
-            
         }
+    }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
 }
 
