@@ -38,7 +38,6 @@ class NetworkManager {
                     completion(.failure(.serverError))
                     return
                 }
-                // If we made it here, you have received data back. The (data) means you are goign to pass that back when this function gets called. So we need to call this function from your other view controller where you want to use it. You'll pass in the urlString with the api key attached
                 completion(.success(data))
             }.resume()
         }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A51FB7AF2512F62300CEDC42 /* datePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FB7AE2512F62300CEDC42 /* datePickerViewController.swift */; };
 		A51FB7B12512FA3D00CEDC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51FB7B02512FA3D00CEDC42 /* Main.storyboard */; };
+		A5340CA72542683700850B9C /* FavoriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5340CA62542683700850B9C /* FavoriteCollectionCell.swift */; };
 		A542FB83251C298400DD36AF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A542FB82251C298400DD36AF /* API.swift */; };
 		A58CDB1025104FE500984C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CDB0F25104FE500984C25 /* AppDelegate.swift */; };
 		A58CDB1225104FE500984C25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CDB1125104FE500984C25 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		A51FB7AE2512F62300CEDC42 /* datePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datePickerViewController.swift; sourceTree = "<group>"; };
 		A51FB7B02512FA3D00CEDC42 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A5340CA62542683700850B9C /* FavoriteCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionCell.swift; sourceTree = "<group>"; };
 		A542FB82251C298400DD36AF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A58CDB0C25104FE500984C25 /* Saving APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saving APOD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58CDB0F25104FE500984C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				A58CDB1125104FE500984C25 /* SceneDelegate.swift */,
 				A542FB82251C298400DD36AF /* API.swift */,
 				A58CDB1325104FE500984C25 /* ViewController.swift */,
+				A5340CA62542683700850B9C /* FavoriteCollectionCell.swift */,
 				A5F68E7C253FCCD8001FB657 /* CollectionViewController.swift */,
 				A51FB7B02512FA3D00CEDC42 /* Main.storyboard */,
 				A58CDB1825104FE600984C25 /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 			files = (
 				A5F68E77253FC3C5001FB657 /* UIViewController+Extension.swift in Sources */,
 				A51FB7AF2512F62300CEDC42 /* datePickerViewController.swift in Sources */,
+				A5340CA72542683700850B9C /* FavoriteCollectionCell.swift in Sources */,
 				A58CDB1425104FE500984C25 /* ViewController.swift in Sources */,
 				A58CDB1025104FE500984C25 /* AppDelegate.swift in Sources */,
 				A5F68E7D253FCCD8001FB657 /* CollectionViewController.swift in Sources */,

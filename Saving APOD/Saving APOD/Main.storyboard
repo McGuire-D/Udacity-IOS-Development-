@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -41,9 +41,8 @@
                                             <segue destination="T5m-KN-nvs" kind="presentation" id="MqK-Gb-Fo8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EO-X9-yEr">
-                                        <rect key="frame" x="176" y="24" width="22" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EO-X9-yEr">
+                                        <rect key="frame" x="176.5" y="20" width="22" height="22"/>
                                         <state key="normal" image="star.fill" catalog="system"/>
                                         <connections>
                                             <action selector="favorites:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yP6-GM-oRD"/>
@@ -53,7 +52,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7yn-PY-g5v"/>
+                                    <constraint firstItem="2EO-X9-yEr" firstAttribute="centerX" secondItem="vtU-0i-88q" secondAttribute="centerX" id="9pd-Ib-Jqc"/>
                                     <constraint firstItem="De2-bW-Fld" firstAttribute="top" secondItem="vtU-0i-88q" secondAttribute="top" constant="20" id="KNk-oH-nUH"/>
+                                    <constraint firstItem="2EO-X9-yEr" firstAttribute="top" secondItem="vtU-0i-88q" secondAttribute="top" constant="20" id="RPJ-Z1-Crr"/>
                                     <constraint firstAttribute="trailing" secondItem="De2-bW-Fld" secondAttribute="trailing" constant="20" id="TcK-Cq-Pfp"/>
                                     <constraint firstItem="fc8-GW-klj" firstAttribute="leading" secondItem="vtU-0i-88q" secondAttribute="leading" constant="20" id="der-bN-WHg"/>
                                     <constraint firstItem="fc8-GW-klj" firstAttribute="top" secondItem="vtU-0i-88q" secondAttribute="top" constant="20" id="zh9-gX-n5c"/>
@@ -153,7 +154,7 @@
         <!--Collection View Controller-->
         <scene sceneID="MV4-0m-x3V">
             <objects>
-                <collectionViewController id="T5m-KN-nvs" sceneMemberID="viewController">
+                <collectionViewController id="T5m-KN-nvs" customClass="CollectionViewController" customModule="Saving_APOD" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rCo-lK-N9h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,13 +166,32 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="bt8-bD-GIm">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="favoriteCell" id="bt8-bD-GIm" customClass="FavoriteCollectionCell" customModule="Saving_APOD" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="m6b-lW-o3D">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-NW-k8e">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="128" id="7S4-vx-I2L"/>
+                                                <constraint firstAttribute="height" constant="128" id="bwD-FK-c7T"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="NkP-NW-k8e" secondAttribute="trailing" id="0Gw-ZF-k7G"/>
+                                        <constraint firstItem="NkP-NW-k8e" firstAttribute="top" secondItem="m6b-lW-o3D" secondAttribute="top" id="FnW-vZ-dfF"/>
+                                        <constraint firstAttribute="bottom" secondItem="NkP-NW-k8e" secondAttribute="bottom" id="iXm-7t-WCu"/>
+                                        <constraint firstItem="NkP-NW-k8e" firstAttribute="leading" secondItem="m6b-lW-o3D" secondAttribute="leading" id="vih-pZ-seO"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <size key="customSize" width="128" height="128"/>
+                                <connections>
+                                    <outlet property="imageView" destination="NkP-NW-k8e" id="s5B-eM-MEd"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

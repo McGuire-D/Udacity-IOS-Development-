@@ -53,6 +53,7 @@ class ViewController: UIViewController, datePickerDelegate {
     @IBOutlet weak var ViewImage: UIImageView!
     @IBOutlet weak var TextBox: UITextView!
     
+    
     struct photoInfo: Codable {
         var date: String
         var title: String
@@ -77,15 +78,19 @@ class ViewController: UIViewController, datePickerDelegate {
         if ViewImage.image != nil {
             let image = ViewImage.image
             if let data = image!.pngData() {
-               /* let filename = self.getDirectoryPath().appendingPathComponent(UUID().uuidString)
-                try? data.write(to: filename)
-               */
-                var favoritePictures: [FavoritePictures] = []
                 let picture = FavoritePictures(data: data)
-                favoritePictures.append(picture)
-                self.saveObject(fileName: "FavoriteList", object: favoritePictures)
-                let steven = self.getObject(fileName: "FavoriteList")
-                var junk = 10
+
+                if var favoritePictures = self.getObject(fileName: "FavoriteList") as? [FavoritePictures] {
+                    favoritePictures.append(picture)
+                    self.saveObject(fileName: "FavoriteList", object: favoritePictures)
+                    alertControl(title: "Success", message: "Picture Saved")
+                } else {
+                    var newFavoritePictures: [FavoritePictures] = []
+                    newFavoritePictures.append(picture)
+                    self.saveObject(fileName: "FavoriteList", object: newFavoritePictures)
+                    alertControl(title: "Success", message: "Picture Saved")
+                }
+            
             }
         }
     }
@@ -107,7 +112,6 @@ class ViewController: UIViewController, datePickerDelegate {
     }
     
     func dateChanged(date: Date) {
-        //        convertData(date: date)
         requestApod(date: date)
     }
     
@@ -131,7 +135,6 @@ class ViewController: UIViewController, datePickerDelegate {
                     self.stopIndicatingActivity()
                 }
                 print("oops")
-            // oops
             }
         }
         
@@ -146,7 +149,7 @@ class ViewController: UIViewController, datePickerDelegate {
         guard httpResponse.statusCode == 200 else {
             if httpResponse.statusCode == 429 {
                 alertControl(title: title, message: "APIkey cannot currently handle any more responses...")
-            } else { // key is dead
+            } else {
                 alertControl(title: title, message: "Unexpected httpResponse code...")
             }
             return false
@@ -177,13 +180,11 @@ class ViewController: UIViewController, datePickerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         networkManager = NetworkManager()
-        //        convertData(date: Date.init()
-        // Do any additional setup after loading the view, typically from a nib.
+        requestApod(date: Date())
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
