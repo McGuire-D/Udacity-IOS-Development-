@@ -25,7 +25,7 @@ class FavoritePictures: NSObject, NSCoding {
         self.data = data
     }
 }
-
+// Class for collection view
 class CollectionViewController: UICollectionViewController {
     
     var pictures: [FavoritePictures] = []
@@ -48,7 +48,7 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pictures.count
     }
-
+//check for cell data
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favoriteCell", for: indexPath) as! FavoriteCollectionCell
 

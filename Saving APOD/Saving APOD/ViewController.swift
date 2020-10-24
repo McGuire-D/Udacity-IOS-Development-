@@ -73,7 +73,7 @@ class ViewController: UIViewController, datePickerDelegate {
         performSegue(withIdentifier: "pickDate", sender: self)
     }
     
-    
+// favorites button check for favorites saved or create new if missing
     @IBAction func favorites(_ sender: Any) {
         if ViewImage.image != nil {
             let image = ViewImage.image
@@ -94,7 +94,7 @@ class ViewController: UIViewController, datePickerDelegate {
             }
         }
     }
-    
+// function to update image and text
     func updateViews(photoInfo: photoInfo) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: photoInfo.url) {
@@ -115,7 +115,7 @@ class ViewController: UIViewController, datePickerDelegate {
         requestApod(date: date)
     }
     
-    
+// APOD function
     func requestApod(date: Date) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
@@ -142,7 +142,7 @@ class ViewController: UIViewController, datePickerDelegate {
     
     
     
-    
+// error catch for data catch
     private func errorHandlerResp(data: Data?, response: URLResponse?, error: Error?) -> Bool {
         let httpResponse = response as! HTTPURLResponse
         let title = "NASA APOD Error"

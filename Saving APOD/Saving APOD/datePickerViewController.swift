@@ -13,7 +13,7 @@ protocol datePickerDelegate: class {
     func dateChanged(date: Date)
     
 }
-
+// This class pulls the picker wheel
 class datePickerViewController: UIViewController {
     @IBOutlet weak var APODdate: UIDatePicker!
     weak var delegate: datePickerDelegate?

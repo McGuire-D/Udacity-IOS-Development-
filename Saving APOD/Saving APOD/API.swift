@@ -8,9 +8,9 @@
 
 import Foundation
 import UIKit
-
+// Class for pulling API
 class NetworkManager {
-    
+//error check
     enum NetworkError: Error {
             case badUrl
             case serverError
