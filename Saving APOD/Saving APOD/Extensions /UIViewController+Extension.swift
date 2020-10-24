@@ -12,7 +12,7 @@ import UIKit
 extension UIViewController {
     // see ObjectAssociation<T> class below
     private static let association = ObjectAssociation<UIActivityIndicatorView>()
-    
+    // Activity indicator extension
     var indicator: UIActivityIndicatorView {
         set { UIViewController.association[self] = newValue }
         get {
@@ -24,6 +24,7 @@ extension UIViewController {
             }
         }
     }
+    //starting activity
     public func startIndicatingActivity() {
         DispatchQueue.main.async {
             self.view.addSubview(self.indicator)
@@ -31,6 +32,7 @@ extension UIViewController {
             //UIApplication.shared.beginIgnoringInteractionEvents() // if desired
         }
     }
+    //stopping activity
     public func stopIndicatingActivity() {
         DispatchQueue.main.async {
             self.indicator.stopAnimating()
@@ -46,8 +48,17 @@ extension UIViewController {
             try data.write(to: filePath)
         } catch {
             print("error is: \(error.localizedDescription)")
+            
         }
     }
+    func alertControl(title: String, message: String) -> Void {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
     func getObject(fileName: String) -> Any? {
         
         let filePath = self.getDirectoryPath().appendingPathComponent(fileName)
@@ -57,6 +68,7 @@ extension UIViewController {
             return object
         } catch {
             print("error is: \(error.localizedDescription)")
+            alertControl(title: "Error", message: "We had an issue loading the file path")
         }
         return nil
     }
@@ -86,3 +98,5 @@ public final class ObjectAssociation<T: AnyObject> {
         set { objc_setAssociatedObject(index, Unmanaged.passUnretained(self).toOpaque(), newValue, policy) }
     }
 }
+
+

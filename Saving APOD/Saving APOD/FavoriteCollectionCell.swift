@@ -9,7 +9,7 @@
 import UIKit
 
 class FavoriteCollectionCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
 }

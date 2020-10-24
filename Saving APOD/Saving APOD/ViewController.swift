@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 // code to allow Textbox to have other attributes (bold, italics, normal)
 // https://stackoverflow.com/questions/28496093/making-text-bold-using-attributed-string-in-swift/37992022
@@ -44,30 +45,18 @@ extension NSMutableAttributedString {
     }
 }
 
-class ViewController: UIViewController, datePickerDelegate {
+class ViewController: UIViewController, DatePickerViewController {
     var networkManager: NetworkManager?
+    var pictures: [NSManagedObject] = []
     
-    let apiKey : String = "DEMO_KEY" // replace API key with https://api.nasa.gov/index.html#apply-for-an-api-key
+    
     
     @IBOutlet weak var LoadSpinner: UIActivityIndicatorView!
     @IBOutlet weak var ViewImage: UIImageView!
     @IBOutlet weak var TextBox: UITextView!
     
     
-    struct photoInfo: Codable {
-        var date: String
-        var title: String
-        var description: String
-        var url: URL
-        var copyright: String?
-        enum CodingKeys: String, CodingKey {
-            case date
-            case title
-            case description  = "explanation"
-            case url
-            case copyright
-        }
-    }
+
     
     @IBAction func APODTest(_ sender: Any) {
         performSegue(withIdentifier: "pickDate", sender: self)
@@ -95,7 +84,7 @@ class ViewController: UIViewController, datePickerDelegate {
         }
     }
 // function to update image and text
-    func updateViews(photoInfo: photoInfo) {
+    func updateViews(photoInfo: PhotoInfoModel) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: photoInfo.url) {
                 if let image = UIImage(data: data) {
@@ -120,19 +109,18 @@ class ViewController: UIViewController, datePickerDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
         
-        let urlString = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey + "&date=" + dateFormatter.string(from: date)
-        
         self.startIndicatingActivity()
         
-        networkManager?.makeGetRequest(urlString: urlString) { completion in
+        networkManager?.makeApodRequest(date: dateFormatter.string(from: date)) { completion in
             switch completion {
             case .success(let data):
-                if let photoInfo = try? JSONDecoder().decode(photoInfo.self, from: data) {
+                if let photoInfo = try? JSONDecoder().decode(PhotoInfoModel.self, from: data) {
                     self.updateViews(photoInfo: photoInfo)
                 }
             case .failure( _):
                 DispatchQueue.main.async {
                     self.stopIndicatingActivity()
+                    self.alertControl(title: "Error", message: "Failed to sync")
                 }
                 print("oops")
             }
@@ -148,31 +136,24 @@ class ViewController: UIViewController, datePickerDelegate {
         let title = "NASA APOD Error"
         guard httpResponse.statusCode == 200 else {
             if httpResponse.statusCode == 429 {
-                alertControl(title: title, message: "APIkey cannot currently handle any more responses...")
+                self.alertControl(title: title, message: "APIkey cannot currently handle any more responses...")
             } else {
-                alertControl(title: title, message: "Unexpected httpResponse code...")
+                self.alertControl(title: title, message: "Unexpected httpResponse code...")
             }
             return false
         }
         guard data != nil else {
-            alertControl(title: title, message: "No Entry for this day, try another day.")
+            self.alertControl(title: title, message: "No Entry for this day, try another day.")
             return false
         }
         guard error == nil else {
-            alertControl(title: title, message: "Unexpected Error.")
+            self.alertControl(title: title, message: "Unexpected Error.")
             return false
         }
         return true
     }
-    
-    func alertControl(title: String, message: String) -> Void {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        
-        self.present(alert, animated: true)
-    }
-    
+  //  alert function
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -186,7 +167,7 @@ class ViewController: UIViewController, datePickerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+    // segue for datePickerViewCOntroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? datePickerViewController {
             vc.delegate = self

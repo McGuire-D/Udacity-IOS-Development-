@@ -11,6 +11,7 @@ import UIKit
 // Class for pulling API
 class NetworkManager {
 //error check
+    let apiKey : String = "DEMO_KEY" // replace API key with https://api.nasa.gov/index.html#apply-for-an-api-key
     enum NetworkError: Error {
             case badUrl
             case serverError
@@ -18,8 +19,9 @@ class NetworkManager {
             case canceledRequest
         }
     
-    func makeGetRequest(urlString: String, completion: @escaping (Result<Data, NetworkError>) -> Void){
+    func makeApodRequest(date: String, completion: @escaping (Result<Data, NetworkError>) -> Void){
         
+        let urlString = Urls.apodUrl + apiKey + "&date=" + date
         
         if let url = URL(string: urlString){
             let request = URLRequest(url: url)
@@ -44,3 +46,4 @@ class NetworkManager {
     }
     
 }
+

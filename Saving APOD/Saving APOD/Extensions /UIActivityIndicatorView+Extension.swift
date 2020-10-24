@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-
+// Indicator view extension for activity view specs
 extension UIActivityIndicatorView {
     public static func customIndicator(at center: CGPoint) -> UIActivityIndicatorView {
         let indicator = UIActivityIndicatorView(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0))
@@ -17,7 +17,7 @@ extension UIActivityIndicatorView {
         indicator.center = center
         indicator.hidesWhenStopped = true
         indicator.style = UIActivityIndicatorView.Style.large
-        indicator.backgroundColor = UIColor(red: 1/255, green: 1/255, blue: 1/255, alpha: 0.5)
+        indicator.backgroundColor = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 0.5)
         return indicator
     }
 }

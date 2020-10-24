@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-protocol datePickerDelegate: class {
+protocol DatePickerViewController: class {
     func dateChanged(date: Date)
     
 }
 // This class pulls the picker wheel
 class datePickerViewController: UIViewController {
     @IBOutlet weak var APODdate: UIDatePicker!
-    weak var delegate: datePickerDelegate?
+    weak var delegate: DatePickerViewController?
     var returnDate : Date? = Date.init()
     
     @IBAction func APODChanged(_ sender: Any) {

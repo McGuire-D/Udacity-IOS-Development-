@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A508505325447F3300E20C01 /* ApodModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508505225447F3300E20C01 /* ApodModels.swift */; };
+		A50850562544804600E20C01 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50850552544804600E20C01 /* Urls.swift */; };
 		A51FB7AF2512F62300CEDC42 /* datePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FB7AE2512F62300CEDC42 /* datePickerViewController.swift */; };
 		A51FB7B12512FA3D00CEDC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51FB7B02512FA3D00CEDC42 /* Main.storyboard */; };
 		A5340CA72542683700850B9C /* FavoriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5340CA62542683700850B9C /* FavoriteCollectionCell.swift */; };
@@ -16,12 +18,15 @@
 		A58CDB1425104FE500984C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CDB1325104FE500984C25 /* ViewController.swift */; };
 		A58CDB1925104FE600984C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58CDB1825104FE600984C25 /* Assets.xcassets */; };
 		A58CDB1C25104FE600984C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CDB1A25104FE600984C25 /* LaunchScreen.storyboard */; };
+		A5F2EEA92544C28B00790EF4 /* SavedData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5F2EEA72544C28B00790EF4 /* SavedData.xcdatamodeld */; };
 		A5F68E77253FC3C5001FB657 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F68E76253FC3C5001FB657 /* UIViewController+Extension.swift */; };
 		A5F68E7A253FC491001FB657 /* UIActivityIndicatorView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F68E79253FC491001FB657 /* UIActivityIndicatorView+Extension.swift */; };
 		A5F68E7D253FCCD8001FB657 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F68E7C253FCCD8001FB657 /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A508505225447F3300E20C01 /* ApodModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodModels.swift; sourceTree = "<group>"; };
+		A50850552544804600E20C01 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		A51FB7AE2512F62300CEDC42 /* datePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datePickerViewController.swift; sourceTree = "<group>"; };
 		A51FB7B02512FA3D00CEDC42 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A5340CA62542683700850B9C /* FavoriteCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionCell.swift; sourceTree = "<group>"; };
@@ -33,6 +38,7 @@
 		A58CDB1825104FE600984C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A58CDB1B25104FE600984C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58CDB1D25104FE600984C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F2EEA82544C28B00790EF4 /* SavedData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedData.xcdatamodel; sourceTree = "<group>"; };
 		A5F68E76253FC3C5001FB657 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		A5F68E79253FC491001FB657 /* UIActivityIndicatorView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Extension.swift"; sourceTree = "<group>"; };
 		A5F68E7C253FCCD8001FB657 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -73,12 +79,15 @@
 				A58CDB1125104FE500984C25 /* SceneDelegate.swift */,
 				A542FB82251C298400DD36AF /* API.swift */,
 				A58CDB1325104FE500984C25 /* ViewController.swift */,
+				A50850552544804600E20C01 /* Urls.swift */,
 				A5340CA62542683700850B9C /* FavoriteCollectionCell.swift */,
+				A508505225447F3300E20C01 /* ApodModels.swift */,
 				A5F68E7C253FCCD8001FB657 /* CollectionViewController.swift */,
 				A51FB7B02512FA3D00CEDC42 /* Main.storyboard */,
 				A58CDB1825104FE600984C25 /* Assets.xcassets */,
 				A51FB7AE2512F62300CEDC42 /* datePickerViewController.swift */,
 				A58CDB1A25104FE600984C25 /* LaunchScreen.storyboard */,
+				A5F2EEA72544C28B00790EF4 /* SavedData.xcdatamodeld */,
 				A58CDB1D25104FE600984C25 /* Info.plist */,
 			);
 			path = "Saving APOD";
@@ -168,7 +177,10 @@
 				A51FB7AF2512F62300CEDC42 /* datePickerViewController.swift in Sources */,
 				A5340CA72542683700850B9C /* FavoriteCollectionCell.swift in Sources */,
 				A58CDB1425104FE500984C25 /* ViewController.swift in Sources */,
+				A50850562544804600E20C01 /* Urls.swift in Sources */,
 				A58CDB1025104FE500984C25 /* AppDelegate.swift in Sources */,
+				A508505325447F3300E20C01 /* ApodModels.swift in Sources */,
+				A5F2EEA92544C28B00790EF4 /* SavedData.xcdatamodeld in Sources */,
 				A5F68E7D253FCCD8001FB657 /* CollectionViewController.swift in Sources */,
 				A58CDB1225104FE500984C25 /* SceneDelegate.swift in Sources */,
 				A542FB83251C298400DD36AF /* API.swift in Sources */,
@@ -362,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A5F2EEA72544C28B00790EF4 /* SavedData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A5F2EEA82544C28B00790EF4 /* SavedData.xcdatamodel */,
+			);
+			currentVersion = A5F2EEA82544C28B00790EF4 /* SavedData.xcdatamodel */;
+			path = SavedData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A58CDB0425104FE500984C25 /* Project object */;
 }
