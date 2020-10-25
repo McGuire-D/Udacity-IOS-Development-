@@ -6,35 +6,19 @@
 //  Copyright © 2020 Dustin McGuire. All rights reserved.
 //
 
+import CoreData
 import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class FavoritePictures: NSObject, NSCoding {
-    let data: Data?
-    
-    func encode(with coder: NSCoder) {
-        coder.encode(self.data, forKey: "data")
-    }
-    
-    required init(coder: NSCoder) {
-        self.data = coder.decodeObject(forKey: "data") as? Data
-    }
-    
-    init(data: Data) {
-        self.data = data
-    }
-}
 // Class for collection view
 class CollectionViewController: UICollectionViewController {
     
-    var pictures: [FavoritePictures] = []
+    var pictures: [Apod] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        pictures = self.getObject(fileName: "FavoriteList") as? [FavoritePictures] ?? []
+        pictures = DataBaseHelper.shareInstance.fetchImage()
         
         self.collectionView.delegate = self
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -52,7 +36,7 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favoriteCell", for: indexPath) as! FavoriteCollectionCell
 
-        if let image = convertPicture(from: pictures[indexPath.row].data!) {
+        if let image = UIImage(data: pictures[indexPath.row].photo!) {
             cell.imageView.image = image
         }
         return cell
@@ -61,6 +45,12 @@ class CollectionViewController: UICollectionViewController {
     func convertPicture(from data: Data) -> UIImage? {
         let image = UIImage(data: data)
         return image
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let apod = pictures[indexPath.row]
+        self.alertControl(title: apod.date ?? "Date unknown", message: apod.info ?? "No information available")
     }
 
 }

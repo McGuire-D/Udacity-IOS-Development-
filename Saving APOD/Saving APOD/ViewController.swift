@@ -48,15 +48,11 @@ extension NSMutableAttributedString {
 class ViewController: UIViewController, DatePickerViewController {
     var networkManager: NetworkManager?
     var pictures: [NSManagedObject] = []
-    
-    
+    var photoInformation: PhotoInfoModel?
     
     @IBOutlet weak var LoadSpinner: UIActivityIndicatorView!
     @IBOutlet weak var ViewImage: UIImageView!
     @IBOutlet weak var TextBox: UITextView!
-    
-    
-
     
     @IBAction func APODTest(_ sender: Any) {
         performSegue(withIdentifier: "pickDate", sender: self)
@@ -64,22 +60,9 @@ class ViewController: UIViewController, DatePickerViewController {
     
 // favorites button check for favorites saved or create new if missing
     @IBAction func favorites(_ sender: Any) {
-        if ViewImage.image != nil {
-            let image = ViewImage.image
-            if let data = image!.pngData() {
-                let picture = FavoritePictures(data: data)
-
-                if var favoritePictures = self.getObject(fileName: "FavoriteList") as? [FavoritePictures] {
-                    favoritePictures.append(picture)
-                    self.saveObject(fileName: "FavoriteList", object: favoritePictures)
-                    alertControl(title: "Success", message: "Picture Saved")
-                } else {
-                    var newFavoritePictures: [FavoritePictures] = []
-                    newFavoritePictures.append(picture)
-                    self.saveObject(fileName: "FavoriteList", object: newFavoritePictures)
-                    alertControl(title: "Success", message: "Picture Saved")
-                }
-            
+        if let photoInfo = self.photoInformation {
+            if let imageData = ViewImage.image?.pngData() {
+                DataBaseHelper.shareInstance.saveImage(data: imageData, photoInfo: photoInfo)
             }
         }
     }
@@ -115,6 +98,7 @@ class ViewController: UIViewController, DatePickerViewController {
             switch completion {
             case .success(let data):
                 if let photoInfo = try? JSONDecoder().decode(PhotoInfoModel.self, from: data) {
+                    self.photoInformation = photoInfo
                     self.updateViews(photoInfo: photoInfo)
                 }
             case .failure( _):
